@@ -1,0 +1,12 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<SW-Configuration>
+	<MobileData>
+	<PublicName>SM-G900F</PublicName>
+	</MobileData>
+	<CustomerDataSet>
+	<CSCName>G900FNEE</CSCName>
+	<CSCVersion>1BOB1</CSCVersion>
+	<NbCustomer>1</NbCustomer>
+	<CustomerData src="/Customer/NEE/customer.xml" />
+	</CustomerDataSet>
+</SW-Configuration>

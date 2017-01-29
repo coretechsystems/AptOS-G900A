@@ -1,0 +1,12 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<SW-Configuration>
+	<MobileData>
+	<PublicName>SM-G900M</PublicName>
+	</MobileData>
+	<CustomerDataSet>
+	<CSCName>G900MZTO</CSCName>
+	<CSCVersion>1BOC1</CSCVersion>
+	<NbCustomer>1</NbCustomer>
+	<CustomerData src="/Customer/ZTO/customer.xml" />
+	</CustomerDataSet>
+</SW-Configuration>

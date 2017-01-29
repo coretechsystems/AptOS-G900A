@@ -1,0 +1,12 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<SW-Configuration>
+	<MobileData>
+	<PublicName>SM-G900I</PublicName>
+	</MobileData>
+	<CustomerDataSet>
+	<CSCName>G900IZZT</CSCName>
+	<CSCVersion>1BOA1</CSCVersion>
+	<NbCustomer>1</NbCustomer>
+	<CustomerData src="/Customer/BRI/customer.xml" />
+	</CustomerDataSet>
+</SW-Configuration>

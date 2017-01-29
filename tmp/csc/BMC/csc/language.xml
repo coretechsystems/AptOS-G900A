@@ -1,0 +1,17 @@
+<SamsungMobileLanguage>
+   <Country>Canada</Country>
+   <CountryISO>ca</CountryISO>
+   <SalesCode>OYA</SalesCode>
+   <LanguageSet>
+          <Display>
+              en_CA;fr_CA;ko_KR;zh_CN;zh_TW;
+          </Display>
+          <Input>
+                <SupportList>
+                    en_US;fr;ko;
+                </SupportList>
+                <EnableList>
+                </EnableList>
+          </Input>
+   </LanguageSet>
+</SamsungMobileLanguage>

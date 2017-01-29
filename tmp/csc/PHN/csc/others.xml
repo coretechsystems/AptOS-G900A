@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SamsungMobileFeauture>
+  <Version>ED0003</Version>
+  <Country>NETHERLANDS</Country>
+  <CountryISO>NL</CountryISO>
+  <SalesCode>PHN</SalesCode>
+  <FeatureSet>
+    <CscFeature_Launcher_TotalPageCount>4</CscFeature_Launcher_TotalPageCount>
+    <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
+	<CscFeature_RIL_DualIMSI_HPLMNException>TRUE</CscFeature_RIL_DualIMSI_HPLMNException>
+  </FeatureSet>
+</SamsungMobileFeauture>

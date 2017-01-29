@@ -1,0 +1,96 @@
+<@center><b><#selectbg_g>Terms of Service</#></b>
+
+By installing this package, you take full responsability of it's use, I (edgarf28 and AptLogic) am not responsible of any damage this package may cause to your device.
+
+
+<@center><b><#selectbg_g>READ THIS BEFORE GOING FURTHER</#>
+<@left>
+Welcome to the XtreStoLite ROM.
+
+<@center><#selectbg_g>CHANGELOG</#></b>
+<@left>
+UCU4BOF3 V.2.2.1:
+- Forked from G900F build
+- Added Stock OF3 ATT Kernel
+- Removed all other/older Kernels
+- Removed CSCs
+- Upgraded old Gallery app to S6 version
+- Upgraded old Calculator app to S6 version
+- Build.prop tweaks
+- Fixed keyboard bug
+- Added S6 File Explorer
+- Internet/Data performance enhancements
+
+XXU1BOD3 V.2.2:
+- Updated whole ROM to firmware base XXU1BOD3 (build date April 9th)
+- Done the deodexing process + all the mods using the latest oat2dex jar & apktool 2.0 Final versions 
+- Added TouchWiz Launcher Theme support
+- Added Galaxy S6 System UI/Notification/Ringtone sounds (optional)
+- Updated G900I Stock kernel to firmware base BOD3
+- Updated G900M Stock kernel to BOD1
+- Updated G900L/S/K Stock kernel (and WiFi fix) to firmware base BOD3
+- Updated Google Play Store to v.5.4.12
+- Removed the tweak to remove the boot sound... (this caused continous logcat spam when the bootsound got removed)
+- Removed KNOX /system/bin files
+- Fixed G900I NFC fix (SideSync should work now, & it's an much cleaner NFC fix) (thanks to @txr33)
+- Updated Ktoonsez kernel to 6-APR-2015 (Much much smoother/faster now! And made the default kernel profile Ktoonsified v4)
+- Updated SuperSu to 2.49 (beta)
+- Updated Google Play Services to v.7.3.29
+- Updated Webview to v.42.0.2311.137
+- Updated Google Messenger app to v.1.3.030 (1885066-38)
+- Fixed/Changed Flashlight Quick toggle icon (to the default Galaxy S6 one)
+
+XXU1BOC7 V.2.1:
+- Updated the whole ROM to firmware base XXU1BOC7 (build date: March 16th)
+- Updated G900F Stock kernel to XXU1BOC7
+- Enabled App Ops Permission manager in Settings
+- Added Multi-user support build.prop tweak
+- Updated BTU, CPW, DBT, ITV, XEF & XEO CSC's to the latest versions from the BOC7 firmware
+- Updated Google Play Services to v.7.0.97
+- Updated G900W8 Stock kernel to VLU1BOC1
+- Updated G900M Stock kernel to UBU1BOC1
+- Added AT&T carrier apn settings (for those who are using an G900T model with AT&T)
+- Added ZTO Brazil CSC
+
+XXU1BOB7 V.2.0.1a:
+- Added extra CSC's: SER, BMC, TLS, RWC, VTR, TUR, ATO & THL.
+
+XXU1BOB7 V.2.0.1:
+- Added 'Remove Safe-volume warning' mod (at default in the ROM)
+- Added 'Remove increasing ringtone' mod (optional)
+- Updated Stock G900M kernel to G900M BOB3 firmware
+- Updated Ktoonsez Kernel to 10-3-2015 (BOB1 sources+ramdisk)
+- Updated Google Play Services to v.7.0.93
+- Updated Google Play Store to v.5.3.6
+- Updated Android WebView to v.40 (1779353-arm)
+- Updated Android Messenger app to v.1.2.036 
+
+XXU1BOB7 V.2.0:
+- Android 5.0 (LRX21T)
+- Firmware base: XXU1BOB7 (build date February 13rd) (Silent mode is back! + LP app pinning)
+- Final: Updated System Android Webview to v.40.1728298-arm
+- Final: Updated Google Play Services to v.7.0.87
+- Final: Updated SuperSu to v.2.46
+- Final: Updated Google Play Store to v.5.3.5
+- Final: Updated Ktoonsez Lollipop TW custom kernel to v.26-02-2015
+- Final: Updated G900K/L/S kernel and wifi fix to the latest G900K Lollipop BOB1 firmware
+- Final: Changed default Ktoonsez kernel profile to an modified version of Smoothmaniac v2 
+- Final: Updated BusyBox to 1.23.1
+- Final: Updated Google Messenger to v.1.0.131
+- Final: Added extra quick toggles option, including an flashlight toggle
+- Final: Removed Knox version information from Settings app
+- Final: Enabled 'Unkown sources' at default (Settings -> Security)
+- Final: Enabled 'Show all content while locked' at default (Settings -> Sounds & Notifications) to show full notification info on lockscreen
+- Final: The 3 animation scales are set to 0.5 at default now
+- Final: Added Google Backup/Restore & Feedback at default to the ROM
+- Final: Added NEE CSC
+- Final: Many more changes & fixes (by me & Samsung)
+- BETA 5: Re-added G900I Stock kernel & NFC fix (based on the BOA1 G900I Lollipop firmware)
+- BETA 5: Re-added the 12 Toolbox mod (at default in the ROM)
+- BETA 5: Re-added optional 5-way reboot menu!
+- BETA 5: Added BTU, PHN, DBT, XEF, ITV, BRI & CPW CSC's
+- Updated S/L/K kernel & system fixes to BNL5 S/L/K Lollipop firmware base
+- Updated Google Keyboard to v.4.0.21203.1613964
+- BETA 5: Deodexed using the latest oat2dex.jar by @_riddle
+- Disabled 'Software update' option in Settings -> About device
+- Disabled KNOX in build.prop

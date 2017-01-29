@@ -1,0 +1,2 @@
+	<CscFeature_Sip_UseSymbolInCMKey>true</CscFeature_Sip_UseSymbolInCMKey>
+	<CscFeature_Sip_EnableSymbolInSecondary>en_GB;en_US;az;ca;cs;da;de;et;es;eu;el;fr;ga;gl;ka;hr;it;is;kk;lv;lt;hu;nb;nl;pl;pt;ru;ro;fi;sr;sk;sl;sv;tr;uk;ko;hy;bg;ar;fa;ur;iw;ja;th;vi;zh;uz;in;mk;ms</CscFeature_Sip_EnableSymbolInSecondary>

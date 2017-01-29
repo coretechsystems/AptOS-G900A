@@ -1,0 +1,15 @@
+﻿<?xml  version="1.0" encoding="UTF-8" ?>
+<SamsungMobileFeauture>
+  <Version>ED001</Version>
+  <Country>AUSTRIA</Country>
+  <CountryISO>AT</CountryISO>
+  <SalesCode>ATO</SalesCode>
+  <FeatureSet>
+	<CscFeature_Common_DisablePhoneNumberFormatting>TRUE</CscFeature_Common_DisablePhoneNumberFormatting>
+	<CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
+	<CscFeature_RIL_IgnoreUselessCallForwardFacility>TRUE</CscFeature_RIL_IgnoreUselessCallForwardFacility>
+	<CscFeature_RIL_IgnoreNitzNetworkName>TRUE</CscFeature_RIL_IgnoreNitzNetworkName>
+<CscFeature_Message_UserAgent>SAMSUNG-ANDROID-MMS/SM-G900F</CscFeature_Message_UserAgent>
+<CscFeature_Message_UaProfUrl>http://wap.samsungmobile.com/uaprof/SM-G900F.xml</CscFeature_Message_UaProfUrl>
+  </FeatureSet>
+</SamsungMobileFeauture>

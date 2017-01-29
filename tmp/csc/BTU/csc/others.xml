@@ -1,0 +1,14 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<SamsungMobileFeauture>
+  <Version>ED0001</Version>
+  <Country>UNITED KINGDOM</Country>
+  <CountryISO>GB</CountryISO>
+  <SalesCode>BTU</SalesCode>
+  <FeatureSet>
+    <CscFeature_VoiceCall_EnableVmsNumberAsDefaultInCallForwarding>TRUE</CscFeature_VoiceCall_EnableVmsNumberAsDefaultInCallForwarding>
+    <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
+    <CscFeature_Wifi_UseDefaultSecurityAs>WPA2/PSK</CscFeature_Wifi_UseDefaultSecurityAs>
+    <CscFeature_Message_UserAgent>SAMSUNG-ANDROID-MMS/SM-G900F</CscFeature_Message_UserAgent>
+    <CscFeature_Message_UaProfUrl>http://wap.samsungmobile.com/uaprof/SM-G900F.xml</CscFeature_Message_UaProfUrl>
+  </FeatureSet>
+</SamsungMobileFeauture>
