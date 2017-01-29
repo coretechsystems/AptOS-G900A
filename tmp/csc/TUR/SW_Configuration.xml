@@ -1,0 +1,12 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<SW-Configuration>
+	<MobileData>
+	<PublicName>SM-G900FQ</PublicName>
+	</MobileData>
+	<CustomerDataSet>
+	<CSCName>G900FQTUR</CSCName>
+	<CSCVersion>1BOA2</CSCVersion>
+	<NbCustomer>1</NbCustomer>
+	<CustomerData src="/Customer/TUR/customer.xml" />
+	</CustomerDataSet>
+</SW-Configuration>

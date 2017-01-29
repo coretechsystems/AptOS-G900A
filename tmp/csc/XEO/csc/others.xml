@@ -1,0 +1,21 @@
+<SamsungMobileFeauture> 
+<Version>ED002</Version>
+<Country>Poland</Country>
+<CountryISO>PL</CountryISO>
+<SalesCode>XEO</SalesCode>
+
+<FeatureSet>
+    <CscFeature_Framework_ReplaceDataTypeIconAsOpBrand>LTE</CscFeature_Framework_ReplaceDataTypeIconAsOpBrand>
+    <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
+    <CscFeature_Setting_DataRoamingOption>national</CscFeature_Setting_DataRoamingOption>
+    <CscFeature_Setting_EnableDataServicePopup>true</CscFeature_Setting_EnableDataServicePopup>
+    <CscFeature_RIL_DefaultDataStateFalse>true</CscFeature_RIL_DefaultDataStateFalse>
+	<CscFeature_Setting_EnableEditingIpVersionType>TRUE</CscFeature_Setting_EnableEditingIpVersionType> 
+	<CscFeature_Setting_IncludeApn4SwUpdate>TRUE</CscFeature_Setting_IncludeApn4SwUpdate> 
+    <CscFeature_Message_UserAgent>SAMSUNG-ANDROID-MMS/SM-G900F</CscFeature_Message_UserAgent>
+    <CscFeature_Message_UaProfUrl>http://wap.samsungmobile.com/uaprof/SM-G900F.xml</CscFeature_Message_UaProfUrl>
+    <CscFeature_RIL_ConfigAlwaysOnApn>mms_26003</CscFeature_RIL_ConfigAlwaysOnApn>
+	<CscFeature_RIL_HandleUnsupportedDns64DuringDownBooster>TRUE</CscFeature_RIL_HandleUnsupportedDns64DuringDownBooster>
+    <CscFeature_RIL_EnableLaunchBrowser>TRUE</CscFeature_RIL_EnableLaunchBrowser>
+</FeatureSet>
+</SamsungMobileFeauture>
