@@ -1,0 +1,17 @@
+<SamsungMobileLanguage>
+   <Country>USA</Country>
+   <CountryISO>en</CountryISO>
+   <SalesCode>ATT</SalesCode>
+   <LanguageSet>
+          <Display>
+          en_US;es_US;fr_FR;de_DE;it_IT;ko_KR;zh_CN;
+          </Display>
+          <Input>
+                <SupportList>
+        	en_US;es_US;fr_FR;de_DE;it_IT;ko_KR;zh_CN;
+                </SupportList>
+                <EnableList>
+                </EnableList>
+          </Input>
+   </LanguageSet>
+</SamsungMobileLanguage>
