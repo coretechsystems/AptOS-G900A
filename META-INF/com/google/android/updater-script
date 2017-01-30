@@ -1,5 +1,5 @@
 #
-# X ROM v2.3, Build AAR1B, 01/29/2017
+# X ROM v2.3, Build AAR1D, 01/30/2017
 #
 #  ,--,     ,--,  
 #  |'. \   / .`|  
@@ -31,7 +31,7 @@ ui_print(" ./__;  \  ;  \ ");
 ui_print(" |   : / \  \  ; ");
 ui_print(" ;   |/   \  ' | ");
 ui_print(" `---'     `--` ");
-ui_print("Build AAR1B, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("Build AAR1D, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
 ui_print("Preparing to install, stand by...");
 ui_print("************************************************** ");
 ui_print(" ");
@@ -277,7 +277,7 @@ ui_print(" ./__;  \  ;  \ ");
 ui_print(" |   : / \  \  ; ");
 ui_print(" ;   |/   \  ' | ");
 ui_print(" `---'     `--` ");
-ui_print("Build AAR1B, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("Build AAR1D, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
 ui_print("Installation Complete.");
 ui_print("************************************************** ");
 ui_print(" ");
