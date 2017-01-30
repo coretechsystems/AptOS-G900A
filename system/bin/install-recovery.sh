@@ -1,6 +1,6 @@
 #!/system/bin/sh
-if ! applypatch -c EMMC:/dev/block/platform/msm_sdcc.1/by-name/recovery:12787712:7e3690391893aa52207c28908f3df6f1561cd017; then
-  applypatch -b /system/etc/recovery-resource.dat EMMC:/dev/block/platform/msm_sdcc.1/by-name/boot:12386304:1c6c6c1920e0d73649f3f33c5d47dfe0314a114b EMMC:/dev/block/platform/msm_sdcc.1/by-name/recovery 7e3690391893aa52207c28908f3df6f1561cd017 12787712 1c6c6c1920e0d73649f3f33c5d47dfe0314a114b:/system/recovery-from-boot.p && log -t recovery "Installing new recovery image: succeeded" || log -t recovery "Installing new recovery image: failed"
+if ! applypatch -c EMMC:/dev/block/platform/msm_sdcc.1/by-name/recovery:12789760:6fface4219fceccf7d37e8cca226216cd8f3e002; then
+  applypatch -b /system/etc/recovery-resource.dat EMMC:/dev/block/platform/msm_sdcc.1/by-name/boot:12388352:2801ba3397e1c1643271069d4bfc65c1d3b3d844 EMMC:/dev/block/platform/msm_sdcc.1/by-name/recovery 6fface4219fceccf7d37e8cca226216cd8f3e002 12789760 2801ba3397e1c1643271069d4bfc65c1d3b3d844:/system/recovery-from-boot.p && log -t recovery "Installing new recovery image: succeeded" || log -t recovery "Installing new recovery image: failed"
 else
   log -t recovery "Recovery image already installed"
 fi

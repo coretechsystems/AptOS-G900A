@@ -1,0 +1,284 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<!-- It can be added for each operators like below form
+
+<ABC>                       -> sales code
+<sapient>true</sapient>         -> feature1
+<burton>false</burton>          -> feature2
+<libtech>true</libtech>         -> feature3
+.
+.
+</ABC>
+
+each name of tags are will be environment variable with "ro.csc."
+ex) "ro.csc.sapient", "ro.csc.burton", "ro.csc.libtech" <== you could use them at any section.
+also, should be added between <FeatureSet>
+ and </FeatureSet> .
+jhwan.kim@hdlnc.com  -->
+<SamsungMobileFeature>
+
+<Country></Country>
+<CountryISO></CountryISO>
+<SalesCode></SalesCode>
+
+<!-- ATT -->
+<FeatureSet>
+
+<!-- Common -->
+<CscFeature_Common_DisableMenu4GalSearch>true</CscFeature_Common_DisableMenu4GalSearch>
+<CscFeature_Common_SweepOperationArea>ExcludeAvatar</CscFeature_Common_SweepOperationArea>
+
+<!-- Wi-Fi -->
+<CscFeature_Wifi_ConfigWifiNotificationStyle>ATT</CscFeature_Wifi_ConfigWifiNotificationStyle>
+
+<!-- Camera -->
+<CscFeature_Camera_DisableGPSMenu>false</CscFeature_Camera_DisableGPSMenu>
+<CscFeature_Camera_DefaultStorage>phone</CscFeature_Camera_DefaultStorage>
+<CscFeature_Camera_DefaultQuality>superfine</CscFeature_Camera_DefaultQuality>
+<CscFeature_Camcorder_DefaultQuality>superfine</CscFeature_Camcorder_DefaultQuality>
+<CscFeature_Camera_ShutterSoundMenu>true</CscFeature_Camera_ShutterSoundMenu>
+<CscFeature_Camcorder_DoNotPauseMusic>false</CscFeature_Camcorder_DoNotPauseMusic>
+<CscFeature_Camera_EnableCameraDuringCall>true</CscFeature_Camera_EnableCameraDuringCall>
+<CscFeature_Camera_CameraFlicker>60hz</CscFeature_Camera_CameraFlicker>
+<CscFeature_Camera_CamcorderEnablePromptPopupToSelectRecMode>true</CscFeature_Camera_CamcorderEnablePromptPopupToSelectRecMode>
+
+<!-- Message -->
+
+<CscFeature_Message_MinSlideDuration>5</CscFeature_Message_MinSlideDuration>
+<CscFeature_Message_DisableMenuRequestMmsReadReport>true</CscFeature_Message_DisableMenuRequestMmsReadReport>
+<CscFeature_Message_DisableMenuSmsDeliveryReports>true</CscFeature_Message_DisableMenuSmsDeliveryReports>
+<CscFeature_Message_DisableMenuRequestMmsDeliveryReport>true</CscFeature_Message_DisableMenuRequestMmsDeliveryReport>
+<CscFeature_Message_EnableMenuSendMmsDeliveryReport>false</CscFeature_Message_EnableMenuSendMmsDeliveryReport>
+<CscFeature_Message_EnableLocalSymbolTable>false</CscFeature_Message_EnableLocalSymbolTable>
+<CscFeature_Message_EnableReplyAll>true</CscFeature_Message_EnableReplyAll>
+<CscFeature_Message_ReplaceLabel4RetreivedMsg>true</CscFeature_Message_ReplaceLabel4RetreivedMsg>
+<CscFeature_Message_DisplaySmsTimeAs>server</CscFeature_Message_DisplaySmsTimeAs>
+<CscFeature_Message_EnableAnonymousThread>true</CscFeature_Message_EnableAnonymousThread>
+<CscFeature_Message_EnableMesageAutoView>false</CscFeature_Message_EnableMesageAutoView>
+<CscFeature_Message_MmsModeCaptureVideoMaxSize>1018880</CscFeature_Message_MmsModeCaptureVideoMaxSize>
+<CscFeature_Message_MmsModeCaptureVideoBitRate>0</CscFeature_Message_MmsModeCaptureVideoBitRate>          <!-- 0 = use camcorder default value-->
+<CscFeature_Message_MmsModeCaptureVideoMaxDuration>0</CscFeature_Message_MmsModeCaptureVideoMaxDuration>  <!-- 0 = use camcorder default value-->
+<CscFeature_Message_MmsModeCaptureVideoResolution></CscFeature_Message_MmsModeCaptureVideoResolution>     <!-- "" = use camcorder default value-->
+<CscFeature_Message_EnableExtendSlideTimeToMediaDuration>true</CscFeature_Message_EnableExtendSlideTimeToMediaDuration>
+<CscFeature_Message_EnableUnifiedMmsRetrieveMenu>true</CscFeature_Message_EnableUnifiedMmsRetrieveMenu>
+<CscFeature_Message_DisableMenuWapPushServiceLoading>true</CscFeature_Message_DisableMenuWapPushServiceLoading>
+<CscFeature_Message_DiscardWapPush4SameTimeStamp>true</CscFeature_Message_DiscardWapPush4SameTimeStamp>
+<CscFeature_Message_EnableSmsForwardPrefix>false</CscFeature_Message_EnableSmsForwardPrefix>
+<CscFeature_Message_DisableMmsSubject>true</CscFeature_Message_DisableMmsSubject>
+<CscFeature_Message_ServerBelongToExtreme>true</CscFeature_Message_ServerBelongToExtreme>
+<CscFeature_Message_CMASOperator>us-att-lte</CscFeature_Message_CMASOperator>
+<CscFeature_Message_DisableSaveClassZeroMessage>true</CscFeature_Message_DisableSaveClassZeroMessage>
+<CscFeature_Message_ImageResizeQualityFactorWhenAttach>high</CscFeature_Message_ImageResizeQualityFactorWhenAttach><!-- high = 100 -->
+<CscFeature_Message_EnableSpamReport>true</CscFeature_Message_EnableSpamReport>
+<CscFeature_Message_ConfigOpBackupSync>true</CscFeature_Message_ConfigOpBackupSync>
+<CscFeature_Message_EnableRegisterToCalender>true</CscFeature_Message_EnableRegisterToCalender>
+<CscFeature_Message_LinkDAUSA2>true</CscFeature_Message_LinkDAUSA2>
+
+<!-- KIES -->
+
+<!-- Contacts -->
+<CscFeature_Contacts_ThaiSorting>false</CscFeature_Contacts_ThaiSorting>
+<CscFeature_Contacts_Rollodex>false</CscFeature_Contacts_Rollodex>
+<CscFeature_Contacts_DTMyPhonebook>false</CscFeature_Contacts_DTMyPhonebook>
+<CscFeature_Contacts_SupportMyGroups>false</CscFeature_Contacts_SupportMyGroups>
+<CscFeature_Contacts_CustomeSpeedDial>false</CscFeature_Contacts_CustomeSpeedDial>
+<CscFeature_Contacts_SupportSIMContacts>true</CscFeature_Contacts_SupportSIMContacts>
+<CscFeature_Contacts_VetnameseSorting>false</CscFeature_Contacts_VetnameseSorting>
+<CscFeature_Contacts_CISQuickSearch>false</CscFeature_Contacts_CISQuickSearch>
+<CscFeature_Contacts_PinyinDuoyinzi>false</CscFeature_Contacts_PinyinDuoyinzi>
+<CscFeature_Contacts_ChinaGSMEditCustom>false</CscFeature_Contacts_ChinaGSMEditCustom>
+<CscFeature_Contacts_ChinaGSMIPCallCustom>false</CscFeature_Contacts_ChinaGSMIPCallCustom>
+<CscFeature_Contacts_SpecialCharSearch>false</CscFeature_Contacts_SpecialCharSearch>
+<CscFeature_Contacts_SupportANRContacts>false</CscFeature_Contacts_SupportANRContacts>
+<CscFeature_Contacts_SupportPIMSync>false</CscFeature_Contacts_SupportPIMSync>
+<CscFeature_Contacts_SupportMMS>false</CscFeature_Contacts_SupportMMS>
+<CscFeature_Contacts_SupportRingTone300K>false</CscFeature_Contacts_SupportRingTone300K>
+<CscFeature_Contacts_AddEditButtonViewContacts>false</CscFeature_Contacts_AddEditButtonViewContacts>
+<CscFeature_Contacts_SupportGateMsg>false</CscFeature_Contacts_SupportGateMsg>
+<CscFeature_Contacts_SupportGlympse>false</CscFeature_Contacts_SupportGlympse>
+<CscFeature_Contacts_TWIndexScrollDepth>false</CscFeature_Contacts_TWIndexScrollDepth>
+<CscFeature_Contacts_DefaultDestination>false</CscFeature_Contacts_DefaultDestination>
+<CscFeature_Contacts_SupportAudioPostcard>false</CscFeature_Contacts_SupportAudioPostcard>
+<CscFeature_Contacts_SupportCreateContactMenu>false</CscFeature_Contacts_SupportCreateContactMenu>
+<CscFeature_Contacts_SupportQuickLaunch>false</CscFeature_Contacts_SupportQuickLaunch>
+<CscFeature_Contacts_SupportContactsCounter>false</CscFeature_Contacts_SupportContactsCounter>
+<CscFeature_Contacts_SupportMDNMenu>false</CscFeature_Contacts_SupportMDNMenu>
+<CscFeature_Contacts_SupportDisplaynameEditor>false</CscFeature_Contacts_SupportDisplaynameEditor>
+<CscFeature_Contacts_CTCIPCall>false</CscFeature_Contacts_CTCIPCall>
+<CscFeature_Contacts_CTCDisplayOption>false</CscFeature_Contacts_CTCDisplayOption>
+<CscFeature_Contacts_SupportPuzzySearch>false</CscFeature_Contacts_SupportPuzzySearch>
+<CscFeature_Contacts_SupportCTCBackup>false</CscFeature_Contacts_SupportCTCBackup>
+<CscFeature_Contacts_SupportLUTRoutine>false</CscFeature_Contacts_SupportLUTRoutine>
+<CscFeature_Contacts_SupportCTCQuickContact>false</CscFeature_Contacts_SupportCTCQuickContact>
+<CscFeature_Contacts_DisableDisplayOrder>false</CscFeature_Contacts_DisableDisplayOrder>
+<CscFeature_Contacts_SupportMultiPinyinSearch>false</CscFeature_Contacts_SupportMultiPinyinSearch>
+<CscFeature_Contacts_SupportQRCode>false</CscFeature_Contacts_SupportQRCode>
+<CscFeature_Contacts_SupportSaveRevertPopup>false</CscFeature_Contacts_SupportSaveRevertPopup>
+<CscFeature_Contacts_QuickContactsCDMSGSMIPCall>false</CscFeature_Contacts_QuickContactsCDMSGSMIPCall>
+<CscFeature_Contacts_SupportVipMode>false</CscFeature_Contacts_SupportVipMode>
+<CscFeature_Contacts_SupportCopyToDialer>false</CscFeature_Contacts_SupportCopyToDialer>
+<CscFeature_Contacts_SupportSKTDM>false</CscFeature_Contacts_SupportSKTDM>
+<CscFeature_Contacts_SupportKORAutoJoin>false</CscFeature_Contacts_SupportKORAutoJoin>
+<CscFeature_Contacts_SupportMotionCall>false</CscFeature_Contacts_SupportMotionCall>
+<CscFeature_Contacts_SendEmailViaMMS>false</CscFeature_Contacts_SendEmailViaMMS>
+<CscFeature_Contacts_CustomVibration>false</CscFeature_Contacts_CustomVibration>
+<CscFeature_Contact_ExtendSpeedDialTo100>true</CscFeature_Contact_ExtendSpeedDialTo100>
+<CscFeature_Contact_EnableAAB>true</CscFeature_Contact_EnableAAB>
+<CscFeature_Contact_PromptToDeleteFieldDuringEdit>true</CscFeature_Contact_PromptToDeleteFieldDuringEdit>
+<CscFeature_Contact_BlockFormatMyProfile>true</CscFeature_Contact_BlockFormatMyProfile>
+<CscFeature_Contact_ConfigOpStyleVariation>ATT</CscFeature_Contact_ConfigOpStyleVariation>
+<CscFeature_Contact_EnableCnam>true</CscFeature_Contact_EnableCnam>
+<CscFeature_Contact_EnableEcid>true</CscFeature_Contact_EnableEcid>
+<CscFeature_Contact_ConfigDtmfPause>3</CscFeature_Contact_ConfigDtmfPause>
+<CscFeature_Contact_ConfigSipCallButton>disable</CscFeature_Contact_ConfigSipCallButton>
+<CscFeature_Contact_ConfigReplaceLabelSet>att</CscFeature_Contact_ConfigReplaceLabelSet>
+
+<!-- Calendar -->
+<CscFeature_Calendar_EnableGateMsg>true</CscFeature_Calendar_EnableGateMsg>
+<CscFeature_Calendar_SetColorOfDays>XXXXXXX</CscFeature_Calendar_SetColorOfDays>
+<CscFeature_Calendar_EnableShiftedWeekNumber>true</CscFeature_Calendar_EnableShiftedWeekNumber>
+<CscFeature_Calendar_ReplacePackageAs>true</CscFeature_Calendar_ReplacePackageAs>
+
+<!-- Call -->
+<CscFeature_VoiceCall_IPCallPrefix>false</CscFeature_VoiceCall_IPCallPrefix>
+<CscFeature_VoiceCall_TotalCallTime>false</CscFeature_VoiceCall_TotalCallTime>
+<CscFeature_VoiceCall_ServiceNumberDisplay>false</CscFeature_VoiceCall_ServiceNumberDisplay>
+<CscFeature_VoiceCall_RemoveCallButtonInLogsList>true</CscFeature_VoiceCall_RemoveCallButtonInLogsList>
+<CscFeature_Common_ConfigNetworkModeDuringEmergency>NOCHANGE</CscFeature_Common_ConfigNetworkModeDuringEmergency>
+
+<!-- Multi-Window -->
+<CscFeature_Framework_ConfigDefTrayPosition>LEFT</CscFeature_Framework_ConfigDefTrayPosition>
+
+<!-- Dialer -->
+
+<!-- Log -->
+
+<!-- RIL -->
+<CscFeature_RIL_BlockUssdDuringVolteCall>true</CscFeature_RIL_BlockUssdDuringVolteCall>
+<CscFeature_RIL_CheckImsRegDuringE911>true</CscFeature_RIL_CheckImsRegDuringE911>
+<CscFeature_RIL_CheckTtyModeWhenE911>true</CscFeature_RIL_CheckTtyModeWhenE911>
+<CscFeature_RIL_DisplayPlmnByLURejectCause>true</CscFeature_RIL_DisplayPlmnByLURejectCause>
+<CscFeature_RIL_ConfigFixedApn>cbs,ims,xcap</CscFeature_RIL_ConfigFixedApn>
+<CscFeature_RIL_E911RoutingPolicy>qmisrchmdm</CscFeature_RIL_E911RoutingPolicy>
+<CscFeature_RIL_IgnorePsVoiceIndicationDuringVolte>true</CscFeature_RIL_IgnorePsVoiceIndicationDuringVolte>
+<CscFeature_RIL_SetVolteAudioPath>true</CscFeature_RIL_SetVolteAudioPath>
+<CscFeature_RIL_SsRoutingPolicy>ps-always</CscFeature_RIL_SsRoutingPolicy>
+<CscFeature_RIL_SupportImsService>true</CscFeature_RIL_SupportImsService>
+<CscFeature_RIL_SupportVolte>true</CscFeature_RIL_SupportVolte>
+<CscFeature_RIL_SupportSrvcc>true</CscFeature_RIL_SupportSrvcc>
+<CscFeature_RIL_SrvccRel>8</CscFeature_RIL_SrvccRel>
+<CscFeature_RIL_SupportVolteVtCall>true</CscFeature_RIL_SupportVolteVtCall>
+<CscFeature_RIL_UssdRoutingPolicy>cs</CscFeature_RIL_UssdRoutingPolicy>
+
+<CscFeature_RIL_DisableSimToolKitCmds>LaunchBrowser</CscFeature_RIL_DisableSimToolKitCmds>
+<CscFeature_RIL_EnableVoicePriority>true</CscFeature_RIL_EnableVoicePriority>
+<CscFeature_RIL_ConfigFixedApn>cbs,ims,imsut</CscFeature_RIL_ConfigFixedApn>
+<CscFeature_RIL_LockImsUtApn>true</CscFeature_RIL_LockImsUtApn>
+
+
+<!-- Settings -->
+<CscFeature_Setting_EnableFactoryResetPasswordWhenNoSIM>true</CscFeature_Setting_EnableFactoryResetPasswordWhenNoSIM>
+<CscFeature_Settings_FindMyMobile>false</CscFeature_Settings_FindMyMobile>
+<CscFeature_Settings_FOTA>false</CscFeature_Settings_FOTA>
+<CscFeature_Settings_GMS_Disable>false</CscFeature_Settings_GMS_Disable>
+<CscFeature_Settings_Airplane_Wifi_Dependency>false</CscFeature_Settings_Airplane_Wifi_Dependency>
+<CscFeature_Settings_Silent_Feedback>false</CscFeature_Settings_Silent_Feedback>
+<CscFeature_Settings_HWVersion>false</CscFeature_Settings_HWVersion>
+<CscFeature_Settings_Reset_Password>true</CscFeature_Settings_Reset_Password>
+<CscFeature_Settings_VZWDeviceInfo>false</CscFeature_Settings_VZWDeviceInfo>
+<CscFeature_Settings_GOTA>false</CscFeature_Settings_GOTA>
+<CscFeature_Settings_4GProvisioning>false</CscFeature_Settings_4GProvisioning>
+<CscFeature_Setting_HideApnList>broadband,ATT IMS,ATT CBS,ATT IMSUT</CscFeature_Setting_HideApnList>
+<CscFeature_Setting_ReplaceMenuLockAutoAs>DeviceLockTime</CscFeature_Setting_ReplaceMenuLockAutoAs>
+<!-- ATT Browser Bar-->
+<CscFeature_Setting_EnableBrowserBar>false</CscFeature_Setting_EnableBrowserBar>
+<CscFeature_Setting_IncludeApn4SwUpdate>true</CscFeature_Setting_IncludeApn4SwUpdate>
+
+<!-- MMApp -->
+<CscFeature_FMRadioRTPlus>true</CscFeature_FMRadioRTPlus>
+<CscFeature_FMRadioSEASetting>false</CscFeature_FMRadioSEASetting>
+
+<!-- NFC -->
+<CscFeature_NFC_ConfigAdvancedSettings>Disable</CscFeature_NFC_ConfigAdvancedSettings>
+<CscFeature_NFC_DefaultCardModeConfig>DH:UICC</CscFeature_NFC_DefaultCardModeConfig>
+<CscFeature_NFC_DefStatus>ON</CscFeature_NFC_DefStatus>
+<CscFeature_NFC_SetSecureEventType>ISIS</CscFeature_NFC_SetSecureEventType>
+<CscFeature_NFC_StatusBarIconType>Att</CscFeature_NFC_StatusBarIconType>
+<CscFeature_SmartcardSvc_HideTerminalCapability>eSE</CscFeature_SmartcardSvc_HideTerminalCapability>
+<CscFeature_SmartcardSvc_SetAccessControlType>GPAC, MODE1</CscFeature_SmartcardSvc_SetAccessControlType>
+
+<!-- WEB -->
+<CscFeature_Web_SetUserAgent></CscFeature_Web_SetUserAgent>
+<CscFeature_Web_SetUAProfile>http://wap.samsungmobile.com/uaprof/SM-G900A.xml</CscFeature_Web_SetUAProfile>
+<CscFeature_Web_Bool_EnableDRM>true</CscFeature_Web_Bool_EnableDRM>
+<CscFeature_Web_SetHomepageURL>http://home.att.com</CscFeature_Web_SetHomepageURL>
+<CscFeature_Web_Bool_DisableRSS>false</CscFeature_Web_Bool_DisableRSS>
+<CscFeature_Web_Bool_DisableVoiceSearch>false</CscFeature_Web_Bool_DisableVoiceSearch>
+<CscFeature_Web_Bool_DisableRedirectionChooser>false</CscFeature_Web_Bool_DisableRedirectionChooser>
+<CscFeature_Web_Bool_Disable_Chooser_For_APPLICATION_X_APPLICATIONFOLDER>false</CscFeature_Web_Bool_Disable_Chooser_For_APPLICATION_X_APPLICATIONFOLDER>
+<CscFeature_Web_Bool_StartWIFISettingInAirplaneMode>false</CscFeature_Web_Bool_StartWIFISettingInAirplaneMode>
+<CscFeature_Web_Bool_SkipSettingDefaultBookmarkImage>false</CscFeature_Web_Bool_SkipSettingDefaultBookmarkImage>
+<CscFeature_Web_Bool_EnableUAProfile>false</CscFeature_Web_Bool_EnableUAProfile>
+<CscFeature_Web_Bool_RemoveVideoDownload>false</CscFeature_Web_Bool_RemoveVideoDownload>
+<CscFeature_Web_Bool_DisableSaveLink>false</CscFeature_Web_Bool_DisableSaveLink>
+<CscFeature_Web_Bool_OverrideUserAgent>false</CscFeature_Web_Bool_OverrideUserAgent>
+<CscFeature_Web_Bool_EnableClearTodayHistory>false</CscFeature_Web_Bool_EnableClearTodayHistory>
+<CscFeature_Web_Bool_BlockChargeAtHighTemperature>true</CscFeature_Web_Bool_BlockChargeAtHighTemperature>
+<CscFeature_Web_EnableRoamingDialog>true</CscFeature_Web_EnableRoamingDialog>
+<CscFeature_Web_EnableLogStabililtyTest>true</CscFeature_Web_EnableLogStabililtyTest>
+<CscFeature_Web_BlockSDCDDownload>true</CscFeature_Web_BlockSDCDDownload>
+<CscFeature_Web_UseDeviceIdInHeader>true</CscFeature_Web_UseDeviceIdInHeader>
+<CscFeature_Web_EnableHomepageOption>true</CscFeature_Web_EnableHomepageOption>
+<CscFeature_Web_MaxConnectionPerHost>6</CscFeature_Web_MaxConnectionPerHost>
+<CscFeature_Web_EnableConnectionGuideDuringAirplaneMode>false</CscFeature_Web_EnableConnectionGuideDuringAirplaneMode>
+<CscFeature_Web_Bool_DisableUserAgentVendor>true</CscFeature_Web_Bool_DisableUserAgentVendor>
+<CscFeature_Web_SetQuickAccessAs>USA</CscFeature_Web_SetQuickAccessAs>
+<CscFeature_Web_ShowBubbleTextNoLayout>true</CscFeature_Web_ShowBubbleTextNoLayout>
+<CscFeature_Web_BlockZoomBaseOnTouchPosition>true</CscFeature_Web_BlockZoomBaseOnTouchPosition>
+<CscFeature_Web_CustomizeErrorPage>ATT</CscFeature_Web_CustomizeErrorPage>
+
+<!-- Email -->
+<CscFeature_Email_UseFixedBgColorAsWhite>true</CscFeature_Email_UseFixedBgColorAsWhite>
+
+<!-- Fota -->
+<CscFeature_Fota_Operator>ATT</CscFeature_Fota_Operator>
+
+<!-- SIP -->
+<CscFeature_Sip_DisableMenuKeyboardSwipe>true</CscFeature_Sip_DisableMenuKeyboardSwipe>
+<CscFeature_Sip_DefaultMultiModalKeyAs>VOICE</CscFeature_Sip_DefaultMultiModalKeyAs>
+<CscFeature_Sip_ApplyAutoCorrectionPatent>true</CscFeature_Sip_ApplyAutoCorrectionPatent>
+<CscFeature_Sip_EnableSymbolInSecondary>en_US;es;es_US</CscFeature_Sip_EnableSymbolInSecondary>
+<CscFeature_Sip_EnableLanguageToggleButton>false</CscFeature_Sip_EnableLanguageToggleButton>
+<CscFeature_Sip_DisableSpaceSuggestion>true</CscFeature_Sip_DisableSpaceSuggestion>
+<CscFeature_Sip_KeepDefInputMethodAs>QWERTY</CscFeature_Sip_KeepDefInputMethodAs>
+<CscFeature_Sip_ReplaceSymbolLayout4>ATT</CscFeature_Sip_ReplaceSymbolLayout4>
+<CscFeature_Sip_DefaultOff4AutoSubstitution>true</CscFeature_Sip_DefaultOff4AutoSubstitution>
+<CscFeature_Sip_DefCharCnt4WordCompletion>3</CscFeature_Sip_DefCharCnt4WordCompletion>
+<CscFeature_Sip_AddCommaKeyAsDefault>true</CscFeature_Sip_AddCommaKeyAsDefault>
+<CscFeature_Sip_SymbolPopupInput>SINGLE</CscFeature_Sip_SymbolPopupInput>
+<CscFeature_Sip_ConfigCMKey>OFF</CscFeature_Sip_ConfigCMKey>
+<CscFeature_Sip_ConfigOpBranding>ATT</CscFeature_Sip_ConfigOpBranding>
+
+<!-- IMS -->
+<CscFeature_IMS_EnableIMS>false</CscFeature_IMS_EnableIMS>
+<CscFeature_IMS_EnableRCSe>false</CscFeature_IMS_EnableRCSe>
+<CscFeature_IMS_EnableVoLTE>true</CscFeature_IMS_EnableVoLTE>
+<CscFeature_IMS_EnableLTEVideoCall>false</CscFeature_IMS_EnableLTEVideoCall>
+<CscFeature_IMS_EnableRCSPresence>false</CscFeature_IMS_EnableRCSPresence>
+<CscFeature_IMS_FrameworkVersion>5.0</CscFeature_IMS_FrameworkVersion>
+
+<!-- SEC Launcher -->
+<CscFeature_Launcher_TotalPageCount>4</CscFeature_Launcher_TotalPageCount>
+<CscFeature_Launcher_DefaultPageNumber>0</CscFeature_Launcher_DefaultPageNumber>
+<CscFeature_Launcher_EnableViewByAlphabetAsDefault>true</CscFeature_Launcher_EnableViewByAlphabetAsDefault>
+<CscFeature_Launcher_EnableEasyLauncher>true</CscFeature_Launcher_EnableEasyLauncher>
+<CscFeature_Launcher_DisableTranslucency>true</CscFeature_Launcher_DisableTranslucency>
+
+
+<!-- ATT CIQ -->
+<CscFeature_Common_EnableCiq>USA_ATT</CscFeature_Common_EnableCiq>
+
+<!-- ATT Device Health -->
+<CscFeature_ATT_Device_Health_Enabled>true</CscFeature_ATT_Device_Health_Enabled>
+
+</FeatureSet>
+</SamsungMobileFeature>

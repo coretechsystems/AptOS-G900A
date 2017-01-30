@@ -1,1 +1,0 @@
-    <CscFeature_Web_AddOptionToTerminate>true</CscFeature_Web_AddOptionToTerminate>
