@@ -7,10 +7,16 @@ Follow the XDA thread here: https://forum.xda-developers.com/att-galaxy-s5/devel
 To build the ROM using this source, simply zip the META-INF, assets, and system folders using a utility of your choice, like 7-ZIP (for Windows), through the shell using zip (Linux), or with iZip (Mac).
 
 # Base Information:
+Publicly Available:  
 Kernel: G900AUCU4BOF3 3.4.0-4432708  
 Build Number: LRX21T.G900AUCU4BOF3  
 X ROM Build Code: AAR1D  
 X ROM Build Date: 01/30/2017 #2  
+In Development:  
+Kernel: G900AUCU4BOF3 3.4.0-4432708  
+Build Number: LRX21T.G900AUCU4BOF3  
+X ROM Build Code: AAR1F  
+X ROM Build Date: 01/31/2017 #1
 
 # Release Information:
 Next MAJOR Release: AAR2A  
