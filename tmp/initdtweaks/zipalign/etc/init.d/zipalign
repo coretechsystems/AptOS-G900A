@@ -1,0 +1,61 @@
+#!/system/bin/sh
+
+LOG_FILE=/data/zipalign.log;
+ZIPALIGNDB=/data/zipalign.db;
+
+# Interval between ZipAlign runs, in seconds, 86400=24 hours
+RUN_EVERY=86400
+
+# Get the last modify date of the Log file, if the file does not exist, set value to 0
+if [ -e $LOG_FILE ]; then
+	LASTRUN=`stat -t $LOG_FILE | awk '{print $14}'`
+else
+	LASTRUN=0
+fi;
+
+# Get current date in epoch format
+CURRDATE=`date +%s`
+
+# Check the interval
+INTERVAL=$(expr $CURRDATE - $LASTRUN)
+
+# If interval is more than the set one, then run the main script
+if [ $INTERVAL -gt $RUN_EVERY ];
+then
+
+	if [ -e $LOG_FILE ]; then
+		rm $LOG_FILE;
+	fi;
+
+	if [ ! -f $ZIPALIGNDB ]; then
+		touch $ZIPALIGNDB;
+	fi;
+
+	echo "Starting ZipAlign $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a $LOG_FILE;
+
+	for DIR in /data/app/*; do
+		cd $DIR;
+		for APK in *.apk; do
+			if [ $APK -ot $ZIPALIGNDB ] && [ $(grep "$DIR/$APK" $ZIPALIGNDB|wc -l) -gt 0 ]; then
+				echo "Already checked $DIR/$APK" | tee -a $LOG_FILE;
+			else
+				ZIPCHECK=`/system/xbin/zipalign -c -v 4 $APK | grep FAILED | wc -l`;
+				if [ $ZIPCHECK == "1" ]; then
+					echo "Now aligning $DIR/$APK" | tee -a $LOG_FILE;
+					/system/xbin/zipalign -v -f 4 $APK /data/local/$APK;
+					cp -f -p /data/local/$APK $APK;
+					chmod 644 $APK;
+					busybox rm -f /data/local/$APK;
+					grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB;
+				else
+					echo "Already aligned $DIR/$APK" | tee -a $LOG_FILE;
+					grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB;
+				fi;
+			fi;
+		done;
+	done;
+
+	touch $ZIPALIGNDB;
+	echo "ZipAlign finished at $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a $LOG_FILE;
+
+fi;

@@ -1,0 +1,6 @@
+wlan.wfd.hdcp=disable
+ro.media.enc.jpeg.quality=100
+ro.config.tima=0
+ro.config.knox=0
+ro.securestorage.support=false
+ro.security.mdpp.ux=Disabled

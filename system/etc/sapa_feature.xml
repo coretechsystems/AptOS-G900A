@@ -4,13 +4,10 @@
 <feature name="support_low_latency" value="true"/>
 <feature name="support_mid_latency" value="true"/>
 <feature name="support_high_latency" value="true"/>
-<feature name="support_capture_device" value="true"/>
+<feature name="support_capture_device" value="false"/>
 <feature name="support_dummy_mode" value="true"/>
 <feature name="support_playback_device" value="true"/>
 <feature name="support_boost_mode" value="true"/>
 <feature name="support_samplerate_48000" value="true"/>
 <feature name="support_samplerate_44100" value="false"/>
-<support name="support_powersaving_mode" value="true"/>
-<info name="info_apaservice_api_level" value="4"/>
-<info name="info_apaclient_api_level" value="3"/>
 </feed>
