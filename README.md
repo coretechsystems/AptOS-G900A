@@ -10,14 +10,15 @@ To build the ROM using this source, simply zip the META-INF, assets, and system 
 Publicly Available:  
 Kernel: G900AUCU4BOF3 3.4.0-4432708  
 Build Number: LRX21T.G900AUCU4BOF3  
-X ROM Build Code: AAR1D  
-X ROM Build Date: 01/30/2017 #2  
+X ROM Build Code: AAR1G  
+X ROM Build Date: 01/31/2017 #2  
 In Development:  
 Kernel: G900AUCU4BOF3 3.4.0-4432708  
 Build Number: LRX21T.G900AUCU4BOF3  
-X ROM Build Code: AAR1F  
-X ROM Build Date: 01/31/2017 #1
+X ROM Build Code: AAR1G  
+X ROM Build Date: 01/31/2017 #2
 
 # Release Information:
+Next RC Release: AAR1K, 02/02/2017
 Next MAJOR Release: AAR2A  
 Predicted Release Date: 02/04/2017  
