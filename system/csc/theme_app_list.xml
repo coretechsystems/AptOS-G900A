@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemeAppList xmlns:theme="http://schemas.android.com/apk/res/com.samsung.android.theme" >
+
+	<ThemeApp
+        theme:className="3rd_party_icon"
+        theme:iconId="theme_app_3rd_party_icon" />
+		
+	<ThemeApp
+        theme:className="homesceen_apps_icon"
+        theme:iconId="theme_app_hotseat_apps_icon" />
+
+	<ThemeApp
+        theme:className="com.sec.android.servicecentre.ServiceCentreActivity"
+        theme:iconId="theme_app_servicecenter_icon" />
+		
+	<ThemeApp
+        theme:className="com.samsung.groupcast.start.StartActivity"
+        theme:iconId="theme_app_groupcast_icon" />
+
+	<ThemeApp
+        theme:className="com.bst.ncr.CardListActivity"
+        theme:iconId="theme_app_businesscard_icon" />	
+
+	<ThemeApp
+        theme:className="com.bst.ncr.InitActivity"
+        theme:iconId="theme_app_businesscard_icon" />	
+
+	<ThemeApp
+        theme:className="com.sec.android.app.moreservices.moreservices"
+        theme:iconId="theme_app_moreservices_icon" />	
+
+	<ThemeApp
+        theme:className="com.bst.sync.ui.SyncActivity"
+        theme:iconId="theme_app_backup_icon" />	
+
+	<ThemeApp
+        theme:className="com.sec.android.gallery3d.app.Gallery"
+        theme:iconId="theme_app_gallery_icon" />
+
+	<ThemeApp
+        theme:className="com.sec.android.gallery3d.app.GalleryActivity"
+        theme:iconId="theme_app_gallery_icon" />
+
+	<ThemeApp
+        theme:className="com.sec.android.gallery3d.app.GalleryOpaqueActivity"
+        theme:iconId="theme_app_gallery_icon" />
+        
+	<ThemeApp
+        theme:className="com.sec.android.app.translator.MainActivity"
+        theme:iconId="theme_app_translator_icon" />
+
+	<ThemeApp
+        theme:className="com.samsung.helphub.HelpHubActivity"
+        theme:iconId="theme_app_helphub_icon" />
+
+	<ThemeApp
+        theme:className="com.sec.android.app.clockpackage.ClockPackage"
+        theme:iconId="theme_app_clock_icon" />
+
+	<ThemeApp
+        theme:className="com.android.settings.Settings"
+        theme:iconId="theme_app_setting_icon" />
+
+	<ThemeApp
+        theme:className="com.android.settings.SettingsTabActivity"
+        theme:iconId="theme_app_setting_icon" />
+
+	<ThemeApp
+        theme:className="com.android.settings.GridSettings"
+        theme:iconId="theme_app_setting_icon" />
+
+	<ThemeApp
+        theme:className="com.vlingo.midas.gui.ConversationActivity"
+        theme:iconId="theme_app_svoice_icon" />
+
+	<ThemeApp
+        theme:className="com.samsung.android.snote.control.ui.filemanager.MainHomeActivity"
+        theme:iconId="theme_app_snote_icon" />
+
+	<ThemeApp
+        theme:className="com.sec.android.app.music.MusicActionTabActivity"
+        theme:iconId="theme_app_musicplayer_icon" />
+
+	<ThemeApp
+        theme:className="com.samsung.musicplus.MusicMainActivity"
+        theme:iconId="theme_app_musicplayer_icon" />
+
+	<ThemeApp
+        theme:className="com.samsung.everglades.video.VideoMain"
+        theme:iconId="theme_app_videoplayer_icon" />
+
+	<ThemeApp
+        theme:className="com.samsung.android.app.episodes.ui.timeline.TimelineActivity"
+        theme:iconId="theme_app_storyalbum_icon" />
+
+	<ThemeApp
+        theme:className="com.android.providers.downloads.ui.DownloadList"
+        theme:iconId="theme_app_download_icon" />	
+
+	<ThemeApp
+        theme:className="com.sec.android.app.contacts.RecntcallEntryActivity"
+        theme:iconId="theme_app_calllog_icon" />	
+
+	<ThemeApp
+        theme:className="com.sec.android.app.voicenote.main.VNMainActivity"
+        theme:iconId="theme_app_voice_recorder_icon" />	
+
+	<ThemeApp
+        theme:className="com.sec.android.app.voicerecorder.VoiceRecorderMainActivity"
+        theme:iconId="theme_app_voice_recorder_icon" />	
+
+	<ThemeApp
+        theme:className="com.sec.android.app.myfiles.MainActivity"
+        theme:iconId="theme_app_myfiles_icon" />	
+
+	<ThemeApp
+        theme:className="com.android.email.activity.Welcome"
+        theme:iconId="theme_app_email_icon" />	
+
+	<ThemeApp
+        theme:className="com.baidu.searchbox.SearchActivity"
+        theme:iconId="theme_app_search_icon" />	
+
+	<ThemeApp
+        theme:className="com.autonavi.xmgd.navigator.keyboard.Start"
+        theme:iconId="theme_app_navigator_icon" />	
+
+	<ThemeApp
+        theme:className="com.sec.android.app.ocr.OCR"
+        theme:iconId="theme_app_optical_reader_icon" />	
+
+	<ThemeApp
+        theme:className="com.sec.android.app.popupcalculator.Calculator"
+        theme:iconId="theme_app_calculator_icon" />
+
+	<ThemeApp
+        theme:className="com.sec.android.widgetapp.q1_penmemo.MemoListActivity"
+        theme:iconId="theme_app_smemo_icon" />	
+
+	<ThemeApp
+        theme:className="com.android.calendar.AllInOneActivity"
+        theme:iconId="theme_app_calendar_icon" />	
+
+	<ThemeApp
+        theme:className="com.sec.android.app.camera.Camera"
+        theme:iconId="theme_app_camera_icon" />	
+
+	<ThemeApp
+        theme:className="com.sec.android.app.firewall.VIPMainActivity"
+        theme:iconId="theme_app_vipmode_icon" />	
+
+	<ThemeApp
+        theme:className="com.sec.security.mms.ui.PasswordActivity"
+        theme:iconId="theme_app_security_mail_icon" />		
+
+    <ThemeApp
+        theme:className="com.android.contacts.activities.DialtactsActivity"
+        theme:iconId="theme_app_phone_icon" />
+
+    <ThemeApp
+        theme:className="com.android.dialer.DialtactsActivity"
+        theme:iconId="theme_app_phone_icon" />
+
+    <ThemeApp
+        theme:className="com.android.contacts.activities.PeopleActivity"
+        theme:iconId="theme_app_contact_icon" />
+
+    <ThemeApp
+        theme:className="com.android.mms.ui.ConversationComposer"
+        theme:iconId="theme_app_message_icon" />
+
+    <ThemeApp
+        theme:className="com.sec.android.app.sbrowser.SBrowserMainActivity"
+        theme:iconId="theme_app_sbrowser_icon" />		
+
+    <ThemeApp
+        theme:className="com.sec.android.app.sbrowser.OfflinePageActivity"
+        theme:iconId="theme_app_sbrowser_icon" />
+		
+    <ThemeApp
+        theme:className="com.android.browser.BrowserActivity"
+        theme:iconId="theme_app_sbrowser_icon" />
+
+    <ThemeApp
+        theme:className="com.sec.android.app.themechooser.ThemeListActivity"
+        theme:iconId="theme_app_theme_icon" />        
+
+</ThemeAppList>

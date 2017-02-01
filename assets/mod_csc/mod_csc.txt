@@ -1,8 +1,0 @@
-    <CscFeature_Sip_EnableSymbolInSecondary>ar;bg;cs;da;de;el;en_GB;en_US;es_ES;fa;fi;fr_FR;he;hr;hu;hy;id;is;it;iw;ka;ko;mn;ms;nb;nl;pl;pt_PT;ro;ru;sk;sl;sr;sv;th;tl;tr;uk;ur;uz;vi;zh</CscFeature_Sip_EnableSymbolInSecondary>
-    <CscFeature_VoiceCall_ConfigRecording>RecordingAllowed</CscFeature_VoiceCall_ConfigRecording>
-    <CscFeature_Setting_EnableMenuBlockCallMsg>true</CscFeature_Setting_EnableMenuBlockCallMsg>
-    <CscFeature_Contact_EnableCallButtonInList>true</CscFeature_Contact_EnableCallButtonInList>
-    <CscFeature_Camera_ShutterSoundMenu>true</CscFeature_Camera_ShutterSoundMenu>
-    <CscFeature_Web_AddOptionToTerminate>true</CscFeature_Web_AddOptionToTerminate>
-    <CscFeature_Web_EnablePromptToExit>true</CscFeature_Web_EnablePromptToExit>
-    <CscFeature_RIL_ForceConnectMMS>true</CscFeature_RIL_ForceConnectMMS>

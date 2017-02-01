@@ -1,0 +1,12 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<SW-Configuration>
+	<MobileData>
+	<PublicName>SM-G900A</PublicName>
+	</MobileData>
+	<CustomerDataSet>
+	<CSCName>G900AATT</CSCName>
+	<CSCVersion>3BOC4</CSCVersion>
+	<NbCustomer>1</NbCustomer>
+	<CustomerData src="/Customer/ATT/customer.xml" />
+	</CustomerDataSet>
+</SW-Configuration>

@@ -465,7 +465,7 @@
 
 	<path name="speaker">
 		<path name="spk" />
-		<ctl name="RX7 Digital Volume" value="79" />
+		<ctl name="RX7 Digital Volume" value="85" />
 		<ctl name="SPK DRV Volume" value="8" />
 		<ctl name="COMP0 Switch" value="1" />
 	</path>
@@ -710,7 +710,7 @@
 		<ctl name="ES705 RX1 Enable" value="1" />
 		<path name="rcv" />
 		<ctl name="EAR PA Gain" value="POS_6_DB" />
-		<ctl name="RX1 Digital Volume" value="82" />
+		<ctl name="RX1 Digital Volume" value="95" />
 	</path>
 
 	<path name="voice-call-handset-extra-vol">
@@ -729,7 +729,7 @@
 
 	<path name="voice-call-speaker">
 		<path name="spk" />
-		<ctl name="RX7 Digital Volume" value="84" />
+		<ctl name="RX7 Digital Volume" value="90" />
 		<ctl name="SPK DRV Volume" value="8" />
 		<ctl name="COMP0 Switch" value="1" />
 	</path>
@@ -858,7 +858,7 @@
 		<ctl name="ES705 RX1 Enable" value="1" />
 		<path name="rcv" />
 		<ctl name="EAR PA Gain" value="POS_6_DB" />
-		<ctl name="RX1 Digital Volume" value="82" />
+		<ctl name="RX1 Digital Volume" value="95" />
 	</path>
 
 	<path name="video-call-handset-extra-vol">
@@ -870,7 +870,7 @@
 
 	<path name="video-call-speaker">
 		<path name="spk" />
-		<ctl name="RX7 Digital Volume" value="84" />
+		<ctl name="RX7 Digital Volume" value="95" />
 		<ctl name="SPK DRV Volume" value="8" />
 	</path>
 
