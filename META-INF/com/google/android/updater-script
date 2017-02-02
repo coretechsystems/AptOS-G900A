@@ -3,24 +3,37 @@ unmount("/system");
 unmount("/data");
 unmount("/preload");
 ui_print(" ");
-ui_print("*****************************");
-ui_print("  X_G900A ROM Installation");
-ui_print("    Made by DejaVuAgain");
-ui_print("*****************************");
-ui_print(" Based on XtreStoLite v2.2.0");
-ui_print("     Thanks to edgarf28");
-ui_print("*****************************");
+ui_print(" ");
+ui_print("************************************************** ");
+ui_print(" ,--,     ,--, ");
+ui_print(" |'. \   / .`| ");
+ui_print(" ; \ `\ /' / ; ");
+ui_print(" `. \  /  / .' ");
+ui_print("  \  \/  / ./ ");
+ui_print("   \  \.'  / ");
+ui_print("					X ROM v2.3");
+ui_print("   / \  \  \ ");
+ui_print("  ;  /\  \  \ ");
+ui_print("./__;  \  ;  \ ");
+ui_print("|   : / \  \  ; ");
+ui_print(";   |/   \  ' | ");
+ui_print("`---'     `--` ");
+ui_print("Build AAR1H, V:5.0 R:Y BB:G900AUCU4BOF3, S:Y");
+ui_print("Installing, stand by...");
+ui_print("************************************************** ");
+ui_print(" ");
+ui_print(" ");
 
-ui_print("Preparing Installation...");
-ui_print("Mounting Partitions...");
+ui_print("++Preparing to install...");
+ui_print(" +-Mounting Partitions...");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/system", "/system");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/hidden", "/preload");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/cache", "/cache");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/userdata", "/data");
 set_progress(0.1);
-ui_print("Wiping the Preload partition...");
+ui_print(" +-Wiping the preload...");
 delete_recursive("/preload");
-ui_print("Cleaning before the installation begins...");
+ui_print(" +-Cleaning before installation...");
 delete_recursive("/system");
 delete_recursive("/cache");
 delete_recursive("/data/dalvik-cache");
@@ -35,15 +48,17 @@ run_program("/tmp/wipe.sh");
 
 set_progress(0.2);
 
-ui_print("Extracting New System...");
+ui_print(" ");
+ui_print("++Installing System...");
+ui_print(" +-Extracting New System...");
 package_extract_dir("system", "/system");
 package_extract_dir("tmp/su_busybox/system", "/system");
 set_progress(0.6);
 
-ui_print("Flashing G900A Stock kernel...");
+ui_print(" +-Flashing G900A Stock kernel...");
 package_extract_file("tmp/G900Akernel/boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
 
-ui_print("Applying CSC...");
+ui_print(" +-Applying CSC...");
 package_extract_dir("tmp/csc/ATT", "/system");
 
 # ui_print("Enabling the 5-Way Reboot menu...");
@@ -68,7 +83,7 @@ package_extract_dir("tmp/csc/ATT", "/system");
 # delete("/tmp/mytweaks.sh");
 # delete("/tmp/misc");
 
-ui_print("Adding Faster bootanimations build.prop tweak...");
+ui_print(" +-Enabling faster boot animation...");
 package_extract_file("tmp/buildproptweaks/fasterbootanimation/mytweaks.sh", "/tmp/mytweaks.sh");
 package_extract_file("tmp/buildproptweaks/fasterbootanimation/misc", "/tmp/misc");
 set_perm(0, 0, 0777, "/tmp/mytweaks.sh");
@@ -77,7 +92,7 @@ delete("/tmp/mytweaks.sh");
 delete("/tmp/misc");
 
 set_progress(0.7);
-ui_print("Settings Permissions & Symlinks...");
+ui_print(" +-Setting Permissions & Symlinks...");
 symlink("dalvikvm32", "/system/bin/dalvikvm");
 symlink("toolbox", "/system/bin/cat", "/system/bin/chcon", "/system/bin/chmod", "/system/bin/chown",
 	"/system/bin/clear", "/system/bin/cmp", "/system/bin/cp", "/system/bin/date", "/system/bin/dd",
@@ -223,7 +238,7 @@ run_program("/tmp/su_busybox.sh");
 delete("/tmp/su_busybox.sh");
 run_program("/sbin/sh", "-c", "busybox find /system/vendor -type d -exec chown 0:2000 {} \;");
 
-ui_print("Adding init.d support...");
+ui_print(" +-Adding init.d support...");
 package_extract_file("tmp/add_initd.sh", "/tmp/add_initd.sh");
 set_perm(0, 0, 0777, "/tmp/add_initd.sh");
 run_program("/tmp/add_initd.sh");
@@ -269,11 +284,13 @@ set_progress(0.8);
 # ui_print("Disable LogCat init.d tweak...");
 # package_extract_dir("tmp/initdtweaks/disablelogcat", "/system");
 
-ui_print("Adding Zip Align init.d tweak...");
+ui_print(" +-Adding Zip Align init.d tweak...");
 package_extract_dir("tmp/initdtweaks/zipalign", "/system");
 set_metadata("/system/xbin/zipalign", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 
 set_progress(0.9);
+ui_print(" ");
+ui_print("++Doing some housekeeping...");
 package_extract_file("tmp/cleanbusybox.sh", "/tmp/cleanbusybox.sh");
 set_perm(0, 0, 0777, "/tmp/cleanbusybox.sh");
 run_program("/tmp/cleanbusybox.sh");
@@ -285,7 +302,26 @@ unmount("/system");
 unmount("/data");
 unmount("/preload");
 
-ui_print("******************************************"); 
-ui_print("        ROM Successfully Installed        "); 
-ui_print("******************************************"); 
+ui_print(" ");
+ui_print(" ");
+ui_print("************************************************** ");
+ui_print(" ,--,     ,--, ");
+ui_print(" |'. \   / .`| ");
+ui_print(" ; \ `\ /' / ; ");
+ui_print(" `. \  /  / .' ");
+ui_print("  \  \/  / ./ ");
+ui_print("   \  \.'  / ");
+ui_print("					X ROM v2.3");
+ui_print("   / \  \  \ ");
+ui_print("  ;  /\  \  \ ");
+ui_print("./__;  \  ;  \ ");
+ui_print("|   : / \  \  ; ");
+ui_print(";   |/   \  ' | ");
+ui_print("`---'     `--` ");
+ui_print("Build AAR1H, V:5.0 R:Y BB:G900AUCU4BOF3, S:Y");
+ui_print("Installation Complete!");
+ui_print("Installer by AptLogic@XDA and DejaVuAgain@XDA");
+ui_print("************************************************** ");
+ui_print(" ");
+ui_print(" ");
 set_progress(1.0);
