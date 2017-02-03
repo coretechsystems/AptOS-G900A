@@ -1,24 +1,25 @@
 # X-ROM-G900A
 ![rip logo](http://i.imgur.com/u7cQBVW.jpg)
-The X ROM for the AT&amp;T Samsung Galaxy S5 (klteuc/klteatt) built over DevBase 3 for the G900F.  
+The X ROM for the AT&amp;T Samsung Galaxy S5 (klteuc/klteatt) built over XtreStoLite for the G900F.  
 Follow the XDA thread here: https://forum.xda-developers.com/att-galaxy-s5/development/rom-xtrestolite-g900a-edition-extras-t3525205
 
 # Build Instructions
-To build the ROM using this source, simply zip the META-INF, assets, and system folders using a utility of your choice, like 7-ZIP (for Windows), through the shell using zip (Linux), or with iZip (Mac).
+To build the ROM using this source, simply zip the META-INF, assets, and system folders using a utility of your choice, like 7-ZIP (for Windows), through the shell using zip (Linux), or with iZip (Mac).  
+OR download the prebuilt zip at https://www.androidfilehost.com/?fid=673368273298928404
 
 # Base Information:
 Publicly Available:  
 Kernel: G900AUCU4BOF3 3.4.0-4432708  
 Build Number: LRX21T.G900AUCU4BOF3  
-X ROM Build Code: AAR1G  
-X ROM Build Date: 01/31/2017 #2  
+X ROM Build Code: AAR1J-RC1  
+X ROM Build Date: 02/02/2017 #1  
 In Development:  
 Kernel: G900AUCU4BOF3 3.4.0-4432708  
 Build Number: LRX21T.G900AUCU4BOF3  
-X ROM Build Code: AAR1G  
-X ROM Build Date: 01/31/2017 #2
+X ROM Build Code: AAR1J-RC1  
+X ROM Build Date: 02/02/2017 #1
 
 # Release Information:
-Next RC Release: AAR1K, 02/02/2017
+Next RC Release: AAR1K, 02/03/2017
 Next MAJOR Release: AAR2A  
 Predicted Release Date: 02/04/2017  
