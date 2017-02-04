@@ -3,25 +3,24 @@ unmount("/system");
 unmount("/data");
 unmount("/preload");
 ui_print(" ");
-ui_print(" ");
 ui_print("************************************************** ");
-ui_print("Prepping for installation, stand by..");
-ui_print(" ");
-ui_print("				X ROM v2.3 				");
-ui_print("Build AAR1J RC1, V:5.0 R:Y BB:G900AUCU4BOF3, S:NA");
-ui_print(" ");
+ui_print("				X ROM v2.3");
+ui_print("Build AAR1M, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("By AptLogic with help from @DejaVuAgain and @edgarf28");
 ui_print("************************************************** ");
 ui_print(" ");
 ui_print(" ");
-ui_print(" ");
+
+ui_print("Preparing Installation...");
 ui_print("Mounting Partitions...");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/system", "/system");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/hidden", "/preload");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/cache", "/cache");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/userdata", "/data");
 set_progress(0.1);
-ui_print("Preparing to flash the system...");
+ui_print("Wiping the Preload partition...");
 delete_recursive("/preload");
+ui_print("Cleaning before the installation begins...");
 delete_recursive("/system");
 delete_recursive("/cache");
 delete_recursive("/data/dalvik-cache");
@@ -30,34 +29,28 @@ package_extract_file("tmp/cleanaddons.sh", "/tmp/cleanaddons.sh");
 set_perm(0, 0, 0777, "/tmp/cleanaddons.sh");
 run_program("/tmp/cleanaddons.sh");
 
-		package_extract_file("tmp/wipe.sh", "/tmp/wipe.sh");
-		set_perm(0, 0, 0777, "/tmp/wipe.sh");
-		run_program("/tmp/wipe.sh");
+package_extract_file("tmp/wipe.sh", "/tmp/wipe.sh");
+set_perm(0, 0, 0777, "/tmp/wipe.sh");
+run_program("/tmp/wipe.sh");
 
 set_progress(0.2);
 
-ui_print("Flashing System...");
+ui_print("Extracting New System...");
 package_extract_dir("system", "/system");
 package_extract_dir("tmp/su_busybox/system", "/system");
 set_progress(0.6);
 
-	ui_print("Flashing Kernel...");
-	package_extract_file("tmp/G900Akernel/boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+ui_print("Flashing G900A Stock kernel...");
+package_extract_file("tmp/G900Akernel/boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+
+ui_print("Applying CSC...");
+package_extract_dir("tmp/csc/ATT", "/system");
 
 # ui_print("Enabling the 5-Way Reboot menu...");
 # package_extract_dir("tmp/mods/5wayreboot", "/system");
 
 # ui_print("Disabling Increasing Ringtone...");
 # package_extract_dir("tmp/mods/removeincreasingringtone", "/system");
-
-# ui_print("Installing Galaxy S6 System Sounds...");
-# package_extract_dir("tmp/mods/S6SystemSounds/media", "/system/media");
-# package_extract_file("tmp/mods/S6SystemSounds/buildprop/mytweaks.sh", "/tmp/mytweaks.sh");
-# package_extract_file("tmp/mods/S6SystemSounds/buildprop/misc", "/tmp/misc");
-# set_perm(0, 0, 0777, "/tmp/mytweaks.sh");
-# run_program("/tmp/mytweaks.sh", "mytweak");
-# delete("/tmp/mytweaks.sh");
-# delete("/tmp/misc");
 
 # ui_print("Adding WiFi scan interval build.prop tweak...");
 # package_extract_file("tmp/buildproptweaks/wifiscaninterval/mytweaks.sh", "/tmp/mytweaks.sh");
@@ -78,22 +71,6 @@ set_progress(0.6);
 ui_print("Adding Faster bootanimations build.prop tweak...");
 package_extract_file("tmp/buildproptweaks/fasterbootanimation/mytweaks.sh", "/tmp/mytweaks.sh");
 package_extract_file("tmp/buildproptweaks/fasterbootanimation/misc", "/tmp/misc");
-set_perm(0, 0, 0777, "/tmp/mytweaks.sh");
-run_program("/tmp/mytweaks.sh", "mytweak");
-delete("/tmp/mytweaks.sh");
-delete("/tmp/misc");
-
-# ui_print("Adding Multi-user support build.prop tweak...");
-# package_extract_file("tmp/buildproptweaks/multiuser/mytweaks.sh", "/tmp/mytweaks.sh");
-# package_extract_file("tmp/buildproptweaks/multiuser/misc", "/tmp/misc");
-# set_perm(0, 0, 0777, "/tmp/mytweaks.sh");
-# run_program("/tmp/mytweaks.sh", "mytweak");
-# delete("/tmp/mytweaks.sh");
-# delete("/tmp/misc");
-
-ui_print("Applying default build.prop tweaks (Screen mirroring fix & 100% JPG Quality tweak)...");
-package_extract_file("tmp/buildproptweaks/defaultbuildproptweaks/mytweaks.sh", "/tmp/mytweaks.sh");
-package_extract_file("tmp/buildproptweaks/defaultbuildproptweaks/misc", "/tmp/misc");
 set_perm(0, 0, 0777, "/tmp/mytweaks.sh");
 run_program("/tmp/mytweaks.sh", "mytweak");
 delete("/tmp/mytweaks.sh");
@@ -239,7 +216,7 @@ symlink("/system/lib/libnfc_nci_jni.so", "/system/app/NfcNci/lib/arm/libnfc_nci_
     set_metadata("/system/etc/security/.drm", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drm_security_system_file:s0");
     set_metadata("/system/etc/sensor_def_qcomdev.conf", "uid", 0, "gid", 0, "mode", 0644, "capabilities", 0x0, "selabel", "u:object_r:sensors_system_file:s0");
     set_metadata("/system/lib/drm", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drm_lib_system_file:s0");
-
+	
 package_extract_file("tmp/su_busybox.sh", "/tmp/su_busybox.sh");
 set_perm(0, 0, 0777, "/tmp/su_busybox.sh");
 run_program("/tmp/su_busybox.sh");
@@ -255,24 +232,6 @@ delete("/tmp/add_initd.sh");
 # ui_print("Enabling Call Recorder in the Dialer...");
 # package_extract_file("tmp/mod_csc.sh", "/tmp/mod_csc.sh");
 # package_extract_file("tmp/csctweaks/callrecording/mod_csc.txt", "/tmp/mod_csc.txt");
-# set_perm(0, 0, 0777, "/tmp/mod_csc.sh");
-# set_perm(0, 0, 0777, "/tmp/mod_csc.txt");
-# run_program("/tmp/mod_csc.sh", "/tmp/mod_csc.txt");
-# delete("/tmp/mod_csc.sh");
-# delete("/tmp/mod_csc.txt");
-
-# ui_print("Enabling the Camera shutter sound button in the Camera app...");
-# package_extract_file("tmp/mod_csc.sh", "/tmp/mod_csc.sh");
-# package_extract_file("tmp/csctweaks/camerashuttersoundbutton/mod_csc.txt", "/tmp/mod_csc.txt");
-# set_perm(0, 0, 0777, "/tmp/mod_csc.sh");
-# set_perm(0, 0, 0777, "/tmp/mod_csc.txt");
-# run_program("/tmp/mod_csc.sh", "/tmp/mod_csc.txt");
-# delete("/tmp/mod_csc.sh");
-# delete("/tmp/mod_csc.txt");
-
-# ui_print("Adding Exit button to the S-Browser app...");
-# package_extract_file("tmp/mod_csc.sh", "/tmp/mod_csc.sh");
-# package_extract_file("tmp/csctweaks/exitbuttonsbrowser/mod_csc.txt", "/tmp/mod_csc.txt");
 # set_perm(0, 0, 0777, "/tmp/mod_csc.sh");
 # set_perm(0, 0, 0777, "/tmp/mod_csc.txt");
 # run_program("/tmp/mod_csc.sh", "/tmp/mod_csc.txt");
@@ -320,20 +279,18 @@ set_perm(0, 0, 0777, "/tmp/cleanbusybox.sh");
 run_program("/tmp/cleanbusybox.sh");
 delete("/tmp/cleanbusybox.sh");
 
+package_extract_dir("tmp/apps", "/data/media/0/_Apps");
+
 unmount("/system");
 unmount("/data");
 unmount("/preload");
 
 ui_print(" ");
-ui_print(" ");
 ui_print("************************************************** ");
-ui_print("Installation complete.");
-ui_print(" ");
-ui_print("				X-ROM v2.3 				");
-ui_print("Build AAR1J RC1, V:5.0 R:Y BB:G900AUCU4BOF3, S:NA");
-ui_print(" ");
+ui_print("				X ROM v2.3");
+ui_print("Build AAR1M, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("Installation Complete!");
 ui_print("************************************************** ");
-ui_print(" ");
 ui_print(" ");
 ui_print(" ");
 set_progress(1.0);
