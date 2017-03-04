@@ -4,8 +4,8 @@ unmount("/data");
 unmount("/preload");
 ui_print(" ");
 ui_print("************************************************** ");
-ui_print("				AptOS v2.4 Beta");
-ui_print("Build AAT1N, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("				AptOS v2.4 Beta - 9w7d4b");
+ui_print("Build AAT1P, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
 ui_print("By AptLogic");
 ui_print("************************************************** ");
 ui_print(" ");
@@ -46,7 +46,6 @@ ui_print("Applying CSC...");
 package_extract_dir("tmp/csc/ATT", "/system");
 
 ui_print("Applying extras...");
-
 # ui_print("Disabling Increasing Ringtone...");
 # package_extract_dir("tmp/mods/removeincreasingringtone", "/system");
 
@@ -58,13 +57,12 @@ ui_print("Applying extras...");
 # delete("/tmp/mytweaks.sh");
 # delete("/tmp/misc");
 
-# ui_print("Adding Faster Sensor/dialer delay build.prop tweak...");
-# package_extract_file("tmp/buildproptweaks/sensordelay/mytweaks.sh", "/tmp/mytweaks.sh");
-# package_extract_file("tmp/buildproptweaks/sensordelay/misc", "/tmp/misc");
-# set_perm(0, 0, 0777, "/tmp/mytweaks.sh");
-# run_program("/tmp/mytweaks.sh", "mytweak");
-# delete("/tmp/mytweaks.sh");
-# delete("/tmp/misc");
+package_extract_file("tmp/buildproptweaks/sensordelay/mytweaks.sh", "/tmp/mytweaks.sh");
+package_extract_file("tmp/buildproptweaks/sensordelay/misc", "/tmp/misc");
+set_perm(0, 0, 0777, "/tmp/mytweaks.sh");
+run_program("/tmp/mytweaks.sh", "mytweak");
+delete("/tmp/mytweaks.sh");
+delete("/tmp/misc");
 
 package_extract_file("tmp/buildproptweaks/fasterbootanimation/mytweaks.sh", "/tmp/mytweaks.sh");
 package_extract_file("tmp/buildproptweaks/fasterbootanimation/misc", "/tmp/misc");
@@ -104,7 +102,6 @@ symlink("/system/lib/libjni_pacprocessor.so", "/system/app/PacProcessor/lib/arm/
 symlink("/system/lib/libnfc_nci_jni.so", "/system/app/NfcNci/lib/arm/libnfc_nci_jni.so");
 
     set_metadata_recursive("/system", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
-	set_metadata_recursive("/system/priv-app/SystemUI/SystemUI.apk", "uid", 0, "gid", 0, "dmode", 0777, "fmode", 0777, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
     set_metadata_recursive("/system/bin", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
     set_metadata_recursive("/system/etc/dhcpcd", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:dhcp_system_file:s0");
     set_metadata_recursive("/system/etc/ppp", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0555, "capabilities", 0x0, "selabel", "u:object_r:ppp_system_file:s0");
@@ -263,6 +260,9 @@ delete("/tmp/mod_csc.txt");
 
 set_progress(0.8);
 
+# ui_print("Disable LogCat init.d tweak...");
+# package_extract_dir("tmp/initdtweaks/disablelogcat", "/system");
+
 ui_print("Adding Zip Align init.d tweak...");
 package_extract_dir("tmp/initdtweaks/zipalign", "/system");
 set_metadata("/system/xbin/zipalign", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
@@ -273,7 +273,6 @@ set_perm(0, 0, 0777, "/tmp/cleanbusybox.sh");
 run_program("/tmp/cleanbusybox.sh");
 delete("/tmp/cleanbusybox.sh");
 
-package_extract_dir("tmp/apps", "/data/media/0/_Apps");
 package_extract_dir("tmp/lte/data", "/data");
 
 unmount("/system");
@@ -282,8 +281,8 @@ unmount("/preload");
 
 ui_print(" ");
 ui_print("************************************************** ");
-ui_print("				AptOS v2.4b");
-ui_print("Build AAT1N, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("				AptOS v2.4 Beta - 9w7d4b");
+ui_print("Build AAT1P, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
 ui_print("Installation Complete!");
 ui_print("************************************************** ");
 ui_print(" ");
