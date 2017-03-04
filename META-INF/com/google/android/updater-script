@@ -4,23 +4,22 @@ unmount("/data");
 unmount("/preload");
 ui_print(" ");
 ui_print("************************************************** ");
-ui_print("				X ROM v2.3");
-ui_print("Build AAR2A, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
-ui_print("By AptLogic with help from @DejaVuAgain and @edgarf28");
+ui_print("				AptOS v2.4 Beta");
+ui_print("Build AAT1N, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("By AptLogic");
 ui_print("************************************************** ");
 ui_print(" ");
 ui_print(" ");
 
-ui_print("Preparing Installation...");
-ui_print("Mounting Partitions...");
+ui_print("Preparing to Install...");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/system", "/system");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/hidden", "/preload");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/cache", "/cache");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/userdata", "/data");
 set_progress(0.1);
-ui_print("Wiping the Preload partition...");
+ui_print("Wiping preload...");
 delete_recursive("/preload");
-ui_print("Cleaning before the installation begins...");
+ui_print("Cleaning up before we start...");
 delete_recursive("/system");
 delete_recursive("/cache");
 delete_recursive("/data/dalvik-cache");
@@ -35,19 +34,18 @@ run_program("/tmp/wipe.sh");
 
 set_progress(0.2);
 
-ui_print("Extracting New System...");
+ui_print("Flashing system unconditionally...");
 package_extract_dir("system", "/system");
 package_extract_dir("tmp/su_busybox/system", "/system");
 set_progress(0.6);
 
-ui_print("Flashing G900A Stock kernel...");
+ui_print("Flashing kernel unconditionally...");
 package_extract_file("tmp/G900Akernel/boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
 
 ui_print("Applying CSC...");
 package_extract_dir("tmp/csc/ATT", "/system");
 
-# ui_print("Enabling the 5-Way Reboot menu...");
-# package_extract_dir("tmp/mods/5wayreboot", "/system");
+ui_print("Applying extras...");
 
 # ui_print("Disabling Increasing Ringtone...");
 # package_extract_dir("tmp/mods/removeincreasingringtone", "/system");
@@ -68,7 +66,6 @@ package_extract_dir("tmp/csc/ATT", "/system");
 # delete("/tmp/mytweaks.sh");
 # delete("/tmp/misc");
 
-ui_print("Adding Faster bootanimations build.prop tweak...");
 package_extract_file("tmp/buildproptweaks/fasterbootanimation/mytweaks.sh", "/tmp/mytweaks.sh");
 package_extract_file("tmp/buildproptweaks/fasterbootanimation/misc", "/tmp/misc");
 set_perm(0, 0, 0777, "/tmp/mytweaks.sh");
@@ -77,7 +74,7 @@ delete("/tmp/mytweaks.sh");
 delete("/tmp/misc");
 
 set_progress(0.7);
-ui_print("Settings Permissions & Symlinks...");
+ui_print("Setting Permissions & Symlinks...");
 symlink("dalvikvm32", "/system/bin/dalvikvm");
 symlink("toolbox", "/system/bin/cat", "/system/bin/chcon", "/system/bin/chmod", "/system/bin/chown",
 	"/system/bin/clear", "/system/bin/cmp", "/system/bin/cp", "/system/bin/date", "/system/bin/dd",
@@ -107,6 +104,7 @@ symlink("/system/lib/libjni_pacprocessor.so", "/system/app/PacProcessor/lib/arm/
 symlink("/system/lib/libnfc_nci_jni.so", "/system/app/NfcNci/lib/arm/libnfc_nci_jni.so");
 
     set_metadata_recursive("/system", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+	set_metadata_recursive("/system/priv-app/SystemUI/SystemUI.apk", "uid", 0, "gid", 0, "dmode", 0777, "fmode", 0777, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
     set_metadata_recursive("/system/bin", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
     set_metadata_recursive("/system/etc/dhcpcd", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:dhcp_system_file:s0");
     set_metadata_recursive("/system/etc/ppp", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0555, "capabilities", 0x0, "selabel", "u:object_r:ppp_system_file:s0");
@@ -216,6 +214,7 @@ symlink("/system/lib/libnfc_nci_jni.so", "/system/app/NfcNci/lib/arm/libnfc_nci_
     set_metadata("/system/etc/security/.drm", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drm_security_system_file:s0");
     set_metadata("/system/etc/sensor_def_qcomdev.conf", "uid", 0, "gid", 0, "mode", 0644, "capabilities", 0x0, "selabel", "u:object_r:sensors_system_file:s0");
     set_metadata("/system/lib/drm", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drm_lib_system_file:s0");
+
 	
 package_extract_file("tmp/su_busybox.sh", "/tmp/su_busybox.sh");
 set_perm(0, 0, 0777, "/tmp/su_busybox.sh");
@@ -229,26 +228,24 @@ set_perm(0, 0, 0777, "/tmp/add_initd.sh");
 run_program("/tmp/add_initd.sh");
 delete("/tmp/add_initd.sh");
 
-# ui_print("Enabling Call Recorder in the Dialer...");
-# package_extract_file("tmp/mod_csc.sh", "/tmp/mod_csc.sh");
-# package_extract_file("tmp/csctweaks/callrecording/mod_csc.txt", "/tmp/mod_csc.txt");
-# set_perm(0, 0, 0777, "/tmp/mod_csc.sh");
-# set_perm(0, 0, 0777, "/tmp/mod_csc.txt");
-# run_program("/tmp/mod_csc.sh", "/tmp/mod_csc.txt");
-# delete("/tmp/mod_csc.sh");
-# delete("/tmp/mod_csc.txt");
+package_extract_file("tmp/mod_csc.sh", "/tmp/mod_csc.sh");
+package_extract_file("tmp/csctweaks/callrecording/mod_csc.txt", "/tmp/mod_csc.txt");
+set_perm(0, 0, 0777, "/tmp/mod_csc.sh");
+set_perm(0, 0, 0777, "/tmp/mod_csc.txt");
+run_program("/tmp/mod_csc.sh", "/tmp/mod_csc.txt");
+delete("/tmp/mod_csc.sh");
+delete("/tmp/mod_csc.txt");
 
-# ui_print("Adding Extra Quick Toggles...");
-# package_extract_dir("tmp/csctweaks/extratoggles/etc", "/system/etc");
-# package_extract_file("tmp/csctweaks/extratoggles/add_initd.sh", "/tmp/add_initd.sh");
-# set_perm(0, 0, 0777, "/tmp/add_initd.sh");
-# run_program("/tmp/add_initd.sh");
-# delete("/tmp/add_initd.sh");
-# package_extract_dir("tmp/csctweaks/extratoggles/vendor", "/system/vendor");
-# package_extract_file("tmp/csctweaks/extratoggles/permissions.sh", "/tmp/permissions.sh");
-# set_perm(0, 0, 0777, "/tmp/permissions.sh");
-# run_program("/tmp/permissions.sh");
-# delete("/tmp/permissions.sh");
+package_extract_dir("tmp/csctweaks/extratoggles/etc", "/system/etc");
+package_extract_file("tmp/csctweaks/extratoggles/add_initd.sh", "/tmp/add_initd.sh");
+set_perm(0, 0, 0777, "/tmp/add_initd.sh");
+run_program("/tmp/add_initd.sh");
+delete("/tmp/add_initd.sh");
+package_extract_dir("tmp/csctweaks/extratoggles/vendor", "/system/vendor");
+package_extract_file("tmp/csctweaks/extratoggles/permissions.sh", "/tmp/permissions.sh");
+set_perm(0, 0, 0777, "/tmp/permissions.sh");
+run_program("/tmp/permissions.sh");
+delete("/tmp/permissions.sh");
 
 package_extract_dir("tmp/csctweaks/defaultsettings/etc", "/system/etc");
 package_extract_file("tmp/csctweaks/defaultsettings/add_initd.sh", "/tmp/add_initd.sh");
@@ -266,9 +263,6 @@ delete("/tmp/mod_csc.txt");
 
 set_progress(0.8);
 
-# ui_print("Disable LogCat init.d tweak...");
-# package_extract_dir("tmp/initdtweaks/disablelogcat", "/system");
-
 ui_print("Adding Zip Align init.d tweak...");
 package_extract_dir("tmp/initdtweaks/zipalign", "/system");
 set_metadata("/system/xbin/zipalign", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
@@ -280,6 +274,7 @@ run_program("/tmp/cleanbusybox.sh");
 delete("/tmp/cleanbusybox.sh");
 
 package_extract_dir("tmp/apps", "/data/media/0/_Apps");
+package_extract_dir("tmp/lte/data", "/data");
 
 unmount("/system");
 unmount("/data");
@@ -287,8 +282,8 @@ unmount("/preload");
 
 ui_print(" ");
 ui_print("************************************************** ");
-ui_print("				X ROM v2.3");
-ui_print("Build AAR2A, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("				AptOS v2.4b");
+ui_print("Build AAT1N, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
 ui_print("Installation Complete!");
 ui_print("************************************************** ");
 ui_print(" ");
