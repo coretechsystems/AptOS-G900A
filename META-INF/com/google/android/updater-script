@@ -4,8 +4,8 @@ unmount("/data");
 unmount("/preload");
 ui_print(" ");
 ui_print("************************************************** ");
-ui_print("				AptOS v2.4 Beta - 9w7d4b");
-ui_print("Build AAT1P, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("				AptOS v2.4 Beta - 10w1d1b");
+ui_print("Build AAT1Q, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
 ui_print("By AptLogic");
 ui_print("************************************************** ");
 ui_print(" ");
@@ -37,6 +37,7 @@ set_progress(0.2);
 ui_print("Flashing system unconditionally...");
 package_extract_dir("system", "/system");
 package_extract_dir("tmp/su_busybox/system", "/system");
+package_extract_dir("data", "/data");
 set_progress(0.6);
 
 ui_print("Flashing kernel unconditionally...");
@@ -260,9 +261,6 @@ delete("/tmp/mod_csc.txt");
 
 set_progress(0.8);
 
-# ui_print("Disable LogCat init.d tweak...");
-# package_extract_dir("tmp/initdtweaks/disablelogcat", "/system");
-
 ui_print("Adding Zip Align init.d tweak...");
 package_extract_dir("tmp/initdtweaks/zipalign", "/system");
 set_metadata("/system/xbin/zipalign", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
@@ -281,8 +279,8 @@ unmount("/preload");
 
 ui_print(" ");
 ui_print("************************************************** ");
-ui_print("				AptOS v2.4 Beta - 9w7d4b");
-ui_print("Build AAT1P, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("				AptOS v2.4 Beta - 10w1d1b");
+ui_print("Build AAT1Q, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
 ui_print("Installation Complete!");
 ui_print("************************************************** ");
 ui_print(" ");
