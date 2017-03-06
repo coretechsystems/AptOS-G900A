@@ -21,6 +21,7 @@ ui_print("Wiping preload...");
 delete_recursive("/preload");
 ui_print("Cleaning up before we start...");
 delete_recursive("/system");
+delete_recursive("/data");
 delete_recursive("/cache");
 delete_recursive("/data/dalvik-cache");
 
@@ -60,13 +61,6 @@ ui_print("Applying extras...");
 
 package_extract_file("tmp/buildproptweaks/sensordelay/mytweaks.sh", "/tmp/mytweaks.sh");
 package_extract_file("tmp/buildproptweaks/sensordelay/misc", "/tmp/misc");
-set_perm(0, 0, 0777, "/tmp/mytweaks.sh");
-run_program("/tmp/mytweaks.sh", "mytweak");
-delete("/tmp/mytweaks.sh");
-delete("/tmp/misc");
-
-package_extract_file("tmp/buildproptweaks/fasterbootanimation/mytweaks.sh", "/tmp/mytweaks.sh");
-package_extract_file("tmp/buildproptweaks/fasterbootanimation/misc", "/tmp/misc");
 set_perm(0, 0, 0777, "/tmp/mytweaks.sh");
 run_program("/tmp/mytweaks.sh", "mytweak");
 delete("/tmp/mytweaks.sh");
