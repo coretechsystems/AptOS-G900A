@@ -1,6 +1,6 @@
 # AptOS-G900A
 ![rip logo](http://i.imgur.com/Ig26wjH.png)
-AptOS, built over a fork of X ROM 2.3
+AptOS, built over a fork of X ROM 2.3 
 Follow the XDA thread here: https://forum.xda-developers.com/att-galaxy-s5/development/aptos-t3564641
 
 # Build Instructions
@@ -11,5 +11,5 @@ OR download the prebuilt zip at https://www.androidfilehost.com/?fid=67336827329
 Publicly Available:  
 Kernel: G900AUCU4BOF3 3.4.0-4432708  
 Build Number: LRX21T.G900AUCU4BOF3  
-AptOS Build Code: AAT1N-9w6d1b  
-AptOS Build Date: 03/03/2017 #1  
+AptOS Build Code: AAT1S-10w2d1b  
+AptOS Build Date: 03/06/2017 #1  
