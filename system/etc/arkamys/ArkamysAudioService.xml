@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<?ported by Ainur Audio Team?>
+<map>
+    <boolean name="QCOMSolution" value="true" />
+	<int name="speakerSensorType" value="0" />
+	<boolean name="RingtoneProfileUsed" value="false" />
+	<boolean name="ActivateArkamysOnBluetooth" value="true" />
+	<int name="presetIDforSpeakerOFF" value="9" />
+	<int name="presetIDforHeadsetOFF" value="9" />
+	<int name="defaultSpeakerPreset" value="1" />
+	<int name="defaultHeadphonePreset" value="10" />
+	<boolean name="ActivateSlowSensor" value="false" />
+	<int name="SlowSensorTime" value="5" />
+</map>

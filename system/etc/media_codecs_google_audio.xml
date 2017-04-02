@@ -18,8 +18,8 @@
     <Decoders>
         <MediaCodec name="OMX.google.mp3.decoder" type="audio/mpeg">
             <Limit name="channel-count" max="2" />
-            <Limit name="sample-rate" ranges="8000,11025,12000,16000,22050,24000,32000,44100,48000" />
-            <Limit name="bitrate" range="8000-320000" />
+            <Limit name="sample-rate" ranges="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000" />
+            <Limit name="bitrate" range="8000-960000" />
         </MediaCodec>
         <MediaCodec name="OMX.google.amrnb.decoder" type="audio/3gpp">
             <Limit name="channel-count" max="1" />
@@ -33,24 +33,22 @@
         </MediaCodec>
         <MediaCodec name="OMX.google.aac.decoder" type="audio/mp4a-latm">
             <Limit name="channel-count" max="8" />
-            <Limit name="sample-rate" ranges="7350,8000,11025,12000,16000,22050,24000,32000,44100,48000" />
+            <Limit name="sample-rate" ranges="7350,8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000" />
             <Limit name="bitrate" range="8000-960000" />
         </MediaCodec>
         <MediaCodec name="OMX.google.g711.alaw.decoder" type="audio/g711-alaw">
-            <Quirk name="decoder-lies-about-samplingrate" />
             <Limit name="channel-count" max="1" />
             <Limit name="sample-rate" ranges="8000" />
             <Limit name="bitrate" range="64000" />
         </MediaCodec>
         <MediaCodec name="OMX.google.g711.mlaw.decoder" type="audio/g711-mlaw">
-            <Quirk name="decoder-lies-about-samplingrate" />
             <Limit name="channel-count" max="1" />
             <Limit name="sample-rate" ranges="8000" />
             <Limit name="bitrate" range="64000" />
         </MediaCodec>
         <MediaCodec name="OMX.google.vorbis.decoder" type="audio/vorbis">
             <Limit name="channel-count" max="8" />
-            <Limit name="sample-rate" ranges="8000,11025,12000,16000,22050,24000,32000,44100,48000,96000" />
+            <Limit name="sample-rate" ranges="8000-96000" />
             <Limit name="bitrate" range="32000-500000" />
         </MediaCodec>
         <MediaCodec name="OMX.google.opus.decoder" type="audio/opus">
@@ -67,7 +65,8 @@
     <Encoders>
         <MediaCodec name="OMX.google.aac.encoder" type="audio/mp4a-latm">
             <Limit name="channel-count" max="6" />
-            <Limit name="sample-rate" ranges="11025,12000,16000,22050,24000,32000,44100,48000" />
+            <Limit name="sample-rate" ranges="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000" />
+            <!-- also may support 64000, 88200  and 96000 Hz -->
             <Limit name="bitrate" range="8000-960000" />
         </MediaCodec>
         <MediaCodec name="OMX.google.amrnb.encoder" type="audio/3gpp">
