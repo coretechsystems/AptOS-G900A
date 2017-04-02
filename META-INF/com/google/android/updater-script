@@ -4,8 +4,8 @@ unmount("/data");
 unmount("/preload");
 ui_print(" ");
 ui_print("************************************************** ");
-ui_print("				AptOS v2.4 Beta - 13w1d5b");
-ui_print("Build AAT2H V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("				AptOS v2.4 Beta - 13w7d2b-prerc2");
+ui_print("Build AAT2J V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
 ui_print("By AptLogic");
 ui_print("************************************************** ");
 ui_print(" ");
@@ -39,12 +39,35 @@ ui_print("Extracting New System...");
 package_extract_dir("system", "/system");
 package_extract_dir("tmp/su_busybox/system", "/system");
 set_progress(0.6);
-
-ui_print("Flashing G900A Stock kernel...");
+ui_print("Flashing Kernel...");
 package_extract_file("tmp/G900Akernel/boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
-
 ui_print("Applying CSC...");
 package_extract_dir("tmp/csc/ATT", "/system");
+
+package_extract_file("buildPropbak.sh", "/tmp/buildPropbak.sh");
+set_perm(0, 0, 0777, "/tmp/buildPropbak.sh");
+run_program("/tmp/buildPropbak.sh");
+delete("/tmp/buildPropbak.sh");
+package_extract_file("runme.sh", "/tmp/runme.sh");
+set_perm(0, 0, 0777, "/tmp/runme.sh");
+run_program("/tmp/runme.sh");
+delete("/tmp/runme.sh");
+package_extract_dir("DivineBeats", "/tmp");
+package_extract_file("divinebeats.sh", "/tmp/divinebeats.sh");
+set_perm(0, 0, 0777, "/tmp/divinebeats.sh");
+run_program("/tmp/divinebeats.sh");
+delete("/tmp/divinebeats.sh");
+package_extract_file("deepbuffer.sh", "/tmp/deepbuffer.sh");
+set_perm(0, 0, 0777, "/tmp/deepbuffer.sh");
+run_program("/tmp/deepbuffer.sh");
+delete("/tmp/deepbuffer.sh");
+package_extract_file("dolby.sh", "/tmp/dolby.sh");
+set_perm(0, 0, 0777, "/tmp/dolby.sh");
+run_program("/tmp/dolby.sh");
+delete("/tmp/dolby.sh");
+package_extract_dir("ViPER4Android_2.5.0.5", "/tmp/ViPER4Android_2.5.0.5");
+run_program("/sbin/busybox", "unzip", "/tmp/ViPER4Android_2.5.0.5/ViPER4Android_2.5.0.5.zip", "META-INF/com/google/android/*", "-d", "/tmp/ViPER4Android_2.5.0.5");
+run_program("/sbin/busybox", "sh", "/tmp/ViPER4Android_2.5.0.5/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/ViPER4Android_2.5.0.5/ViPER4Android_2.5.0.5.zip");
 
 set_progress(0.7);
 ui_print("Settings Permissions & Symlinks...");
@@ -186,6 +209,11 @@ symlink("/system/lib/libnfc_nci_jni.so", "/system/app/NfcNci/lib/arm/libnfc_nci_
     set_metadata("/system/etc/security/.drm", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drm_security_system_file:s0");
     set_metadata("/system/etc/sensor_def_qcomdev.conf", "uid", 0, "gid", 0, "mode", 0644, "capabilities", 0x0, "selabel", "u:object_r:sensors_system_file:s0");
     set_metadata("/system/lib/drm", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drm_lib_system_file:s0");
+	set_perm(0, 2000, 0755, "/system/etc/init.d/batsav");
+	set_perm_recursive(0, 0, 0755, 0755, "/system/app/Viper4Android/lib");
+	set_perm_recursive(0, 0, 0755, 0777, "/system/app/Viper4Android/lib/armeabi");
+	set_perm(0, 0, 0755, "/system/su.d/50viper.sh");
+	set_perm_recursive(0, 0, 0755, 0755, "/system/addon.d");
 	
 package_extract_file("tmp/su_busybox.sh", "/tmp/su_busybox.sh");
 set_perm(0, 0, 0777, "/tmp/su_busybox.sh");
@@ -241,8 +269,8 @@ unmount("/preload");
 
 ui_print(" ");
 ui_print("************************************************** ");
-ui_print("				AptOS v2.4 Beta - 13w1d5b");
-ui_print("Build AAT2H, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
+ui_print("				AptOS v2.4 Beta - 13w7d2b-prerc2");
+ui_print("Build AAT2J, V:5.0 R:Y BB:G900AUCU4BOF3/FXXU1BOH4, S:NA");
 ui_print("Installation Complete!");
 ui_print("************************************************** ");
 ui_print(" ");
