@@ -14,7 +14,7 @@ Build Number: LRX21T.G900AUCU4BOF3
 AptOS Build Code: AAT2N-16w4d  
 AptOS Build Date: 04/19/2017 #4  
 
-#Bug Reporting
+# Bug Reporting
 When submitting issues in the GitHub issue tracker, please use this standard form:
   
   
