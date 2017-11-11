@@ -22,6 +22,20 @@
     <!-- GmsCore must always have network access for GCM and other things. -->
     <allow-in-power-save package="com.google.android.gms" />
     <allow-in-data-usage-save package="com.google.android.gms" />
+    <allow-unthrottled-location package="com.google.android.gms" />
+
+    <!-- OobConfig must always have network access to fetch enterprise and carrier lock config. -->
+    <allow-in-power-save-except-idle package="com.google.android.apps.work.oobconfig" />
+    <allow-in-data-usage-save package="com.google.android.apps.work.oobconfig" />
+
+    <!-- Certain broadcasts must still go to legacy implicit receivers -->
+    <allow-implicit-broadcast action="com.google.android.checkin.CHECKIN_COMPLETE" />
+    <allow-implicit-broadcast action="com.google.gservices.intent.action.GSERVICES_CHANGED" />
+    <allow-implicit-broadcast action="com.google.gservices.intent.action.GSERVICES_OVERRIDE" />
+    <allow-implicit-broadcast action="com.google.android.c2dm.intent.RECEIVE" />
+    <!-- TODO: This is a temporary workaround for allowing GmsCore to receive this broadcast.
+         This can be removed once OneTimeInitializer functionality is moved to GmsCore. -->
+    <allow-implicit-broadcast action="com.google.android.onetimeinitializer.ONE_TIME_INITIALIZED" />
 
     <!-- Play Store likewise must have network access to support other applications. -->
     <allow-in-power-save-except-idle package="com.android.vending" />
@@ -60,6 +74,7 @@
     <system-user-whitelisted-app package="com.google.android.gms" />
     <system-user-whitelisted-app package="com.google.android.gms.policy_auth" />
     <system-user-whitelisted-app package="com.google.android.play.games" />
+    <system-user-whitelisted-app package="com.google.android.tts" />
 
     <!-- These are the packages that are uninstalled for system user -->
     <!-- Apps below are required on all GMS devices -->
@@ -70,9 +85,9 @@
     <!-- Whitelist of what components are permitted as backup data transports.  The
          'service' attribute here is a flattened ComponentName string. -->
     <backup-transport-whitelisted-service
-        service="android/com.android.internal.backup.LocalTransportService" />
-    <backup-transport-whitelisted-service
         service="com.google.android.gms/.backup.BackupTransportService" />
     <backup-transport-whitelisted-service
         service="com.google.android.gms/.backup.component.D2dTransportService" />
+
+
 </config>
