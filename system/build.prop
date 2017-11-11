@@ -279,7 +279,7 @@ ro.build.version.sdl=2101
 
 # OTA Updates
 ro.ota.romname=AptOS
-ro.ota.version=9
+ro.ota.version=10
 ro.ota.manifest=https://coretech.tk/ota/aptos-g900a/explorer/fota.xml
 
 # Dialer Sensor Delay
