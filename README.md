@@ -5,14 +5,6 @@ Follow the XDA thread here: https://forum.xda-developers.com/att-galaxy-s5/devel
 
 # Build Instructions
 To build the ROM using this source, simply zip the META-INF, tmp, and system folders using a utility of your choice, like 7-ZIP (for Windows), through the shell using zip (Linux), or with iZip (Mac).  
-OR download the prebuilt zip at https://www.androidfilehost.com/?fid=745425885120725681
-
-# Release Information:
-Publicly Available:  
-Kernel: G900AUCU4BOF3 3.4.0-4432708  
-Build Number: LRX21T.G900AUCU4BOF3  
-AptOS Build Code: AAT2N-16w4d  
-AptOS Build Date: 04/19/2017 #4  
 
 # Bug Reporting
 When submitting issues in the GitHub issue tracker, please use this standard form:
