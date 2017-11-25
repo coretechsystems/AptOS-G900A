@@ -21,8 +21,4 @@
     <feature name="com.google.android.feature.GOOGLE_EXPERIENCE" />
     <!-- This should declare the version of Exchange that ships -->
     <feature name="com.google.android.feature.EXCHANGE_6_2" />
-
-      <!-- If the tycho app is pre-installed and a matching sim inserted,
-         it temporarily needs internet for messaging, etc -->
-    <allow-in-power-save package="com.google.android.apps.tycho" />
 </config>
