@@ -9,7 +9,7 @@ ui_print("Build AAT3B-50w7d1b");
 ui_print("By AptLogic");
 ui_print("************************************************** ");
 ui_print(" ");
-ui_print(" ");
+ui_print("  ");
 
 ui_print("> Preparing to Install...");
 mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/system", "/system");
