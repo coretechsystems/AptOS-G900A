@@ -239,7 +239,7 @@ unmount("/preload");
 
 ui_print(" ");
 ui_print("************************************************** ");
-ui_print("AptOS v2.5" EXPLORER);
+ui_print("AptOS v2.5 EXPLORER");
 ui_print("Build AAT3B-50w7d1b");
 ui_print("Installation Complete!");
 ui_print("************************************************** ");
